@@ -1,0 +1,14 @@
+{% extends 'web/base.html' %}
+{% load bootstrap4 %}
+
+{% block title %} BlogPost - Account anlegen {% endblock %}
+
+{% block authForm %}
+
+<form method="post" action="">
+    {% csrf_token %}
+    {% bootstrap_form register_form %}
+    <button type="submit"class="btn btn-success">Account jetzt anlegen</button>
+</form>
+
+{% endblock %}
