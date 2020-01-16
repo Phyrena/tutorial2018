@@ -49,11 +49,29 @@ def logout_view(request):
     return redirect(reverse('web:index'))
 
 
+def spiel_Website_view(request):
+    return render(request, 'base.html')
 
 
 def klassen_view(request):
     return render(request, 'web/klassen.html')
 
+
+
+def downloads_view(request):
+    return render(request, 'web/downloads.html')
+
+
+
+def forum_view(request):
+    return render(request, 'web/forum.html')
+
+def team_view(request):
+    return render(request, 'web/team.html')
+
+
+def neuste_beiträge_view(request):
+    return render(request, 'web/neuste_beiträge.html')
 
 
 

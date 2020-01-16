@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-{% load bootstrap4 %}
+{% load static %}
 
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Game-Forum</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/web.css' %}">
     </head>
     <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="page-header2">
         <a class="navbar-brand" href="#">Game-Site</a>
         <span class="navbar-text">
             {% if request.user.is_authenticated %}

@@ -1,0 +1,49 @@
+Header
+div
+a
+img
+
+nav
+ul
+4x li (Anzahl der Links)
+________________________
+HOME
+H1
+H2
+a
+img
+________________________
+
+ABOUT
+H3
+hr
+img
+H4
+p
+________________________
+
+ARBEITEN (Website die ich schon programmiert habe)
+H3
+hr
+
+div
+ul
+6x li, 6x a, 6x img
+_______________________
+
+KONTAKT
+H3
+hr
+form
+input (Name)
+input (Betreff)
+textarea (Nachricht)
+input Button (Senden)
+_______________________
+FOOTER
+p
+_______________________
+
+Schriften:
+https://fonts.google.com/
+den "<link...> in unseren Head einfügen"

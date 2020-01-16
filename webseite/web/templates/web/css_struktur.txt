@@ -1,0 +1,29 @@
+1. In unserer "settings.py" ganz unten den Pfad angeben.
+Bsp.:
+STATIC_URL = '/static/web/css/'
+____________________________________________________________
+
+
+Die Tags ( <p>, <h1>...), kann man normal, in Klassen, mit ID´s setzen und somit manipiulieren!
+
+Die ID´s in der CSS-File werden  mit dem # und den Namen zugewiesen.
+Bsp.:
+#navbar_name {
+background-color: white;
+}
+Wenn es mehrere ID´s sind, dann schreibt man es so:
+Bsp.:
+#navbar_name, #skill2, #skill3, #skill4  {
+background-color: white;
+}
+
+
+
+Die Klassen in der CSS-File werden mit einem Punkt und den Klassen-Namen zugewiesen.
+Bsp.:
+.Klassen-Name {
+background-color: white;
+}
+
+ACHTUNG, wenn mehrere Tags des selben Namens ( <p> <tl>...) manipuliert werden mit den selben Werten, ist es besser
+Klassen, statt ID´s zu verwenden!

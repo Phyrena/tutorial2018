@@ -1,40 +1,76 @@
-{% load bootstrap4 %}
+{% load static %}
 
 <html>
     <head>
         <meta charset="UTF-8">
         <title>{% block title %} Mein Game-Forum {% endblock %}</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'web/css/web.css' %}">
+        <!-- Schrift style -->
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
     </head>
 
     <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Games</a>
-        <span class="navbar-text">
-            {% if request.user.is_authenticated %}
-            <a href="#"><strong>Support |</strong></a>
-            <a href="#"><strong>Team |</strong></a>
-            <a href="{% url 'web:logout' %}"><strong>Logout |</strong></a>
-            {% else %}
-            <a href="{% url 'web:login' %}" class="btn btn-secondary btn-info"><b>Login</b></a>
-            <a href="{% url 'web:register' %}" class="btn btn-secondary btn-info"><b>Account anlegen</b></a>
-            {% endif %}
+    <header>
+        <nav id="header">
+        <div id="Logo">
+            <a class="navbar-brand" href="#">Games</a>
+            <span class="navbar-text1">
+                {% if request.user.is_authenticated %}
+                <a href="{% url 'web:logout' %}"><strong>Logout |</strong></a>
+                {% else %}
+                <a href="{% url 'web:login' %}" class="btn btn-secondary btn-info"><b>Login</b></a>
+                <a href="{% url 'web:register' %}" class="btn btn-secondary btn-info"><b>Account anlegen</b></a>
+                {% endif %}
             </span>
+        </div>
     </nav>
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Spiel-Website</a>
-        <span class="navbar-text">
+    <hr size="10" color="black" >
+    <nav id="header2">
+        <b>
+        <span class="navbar-text3">
+            <a id="hover" href="{% url 'web:spiel_Website' %}">Spiel-Website |</a>
             <a href="{% url 'web:klassen' %}">Klassen |</a>
-            <a href="#">Forum |</a>
-            <a href="#">Neueste Beiträge |</a>
-            <a href="#">Team |</a>
-            <a href="#">Downloads</a>
+            <a href="{% url 'web:forum' %}">Forum |</a>
+            <a href="{% url 'web:neuste_beiträge' %}">Neuste_Beiträge |</a>
+            <a href="{% url 'web:team' %}">Team |</a>
+            <a href="{% url 'web:downloads' %}">Downloads</a>
         </span>
+        </b>
     </nav>
+    <br>
+    </header>
+    <hr>
+    <br>
         {% block authForm %}
-
-
         {% endblock %}
+    <br>
+        <h3>ABOUT</h3>
+        <hr>
+        <p>persöhnliches Zeug</p>
+        <br>
+    <br>
+        <h3>ARBEITEN</h3>
+        <hr>
+        <p>programmierte Websites</p>
+        <br>
+        <ul>
+            <li><img src=" {% static 'web/img/eisriesen.png' %}" alt="Eisriesen_symbol"></li>
+            <li><a href="#"><img src="https://via.placeholder.com/270x160" alt="Projektname2"></a></li>
+            <li><a href="#"><img src="https://via.placeholder.com/270x160" alt="Projektname3"></a></li>
+            <li><a href="#"><img src="https://via.placeholder.com/270x160" alt="Projektname4"></a></li>
+            <li><a href="#"><img src="https://via.placeholder.com/270x160" alt="Projektname5"></a></li>
+        </ul>
+        <br>
+    <br>
+    <br>
+    <footer>
+        <h3>IMPRESSUM</h3>
+        <hr>
+        <p>erreichbarkeit</p>
+        <br>
+        <br>
+    </footer>
+
     </body>
 </html>
 

@@ -1,0 +1,107 @@
+body {
+    background: #414248;
+    color: #b7b7be;
+    margin-left: 40px;
+}
+
+.p1 {
+    color: "red";
+}
+
+.hüberschrift{
+    color: lightgreen;
+    text-align: center;
+}
+
+h1, h2, h3, h4 {
+color: blue;
+text-align: center;
+}
+
+.div1 {
+background: red;
+border-style: solid;
+border-width: 2px;
+border-color: black
+padding: 40px;
+}
+
+.skillname {
+background-color: lightblue;
+color: "red";
+text-align: center;
+}
+
+.skillbeschreibung {
+background-color: black;
+text-align: justify;
+line-height: 25px;
+font-family: "times";
+margin-left: 60px;
+}
+
+
+
+.header {
+    color: white;
+    font-size: 11pt;
+    text-decoration: none;
+}
+
+.navbar-brand {
+    background: red;
+    float: left;
+    font-size: 20pt;
+    margin-right: 20px;
+    font-family: 'Lobster', cursive;
+    color: white;
+}
+
+
+a:link {
+    text-color: lightgreen;
+    background: red;
+    color: lightgreen;
+}
+
+a:link {
+    text-color: lightgreen;
+    background: red;
+    color: yellow;
+}
+
+a:hover {
+    text-color: lightgreen;
+    background: red;
+    color: lightgreen;
+}
+.navbar-text1 {
+    background: red;
+    float: right;
+    font-size: 20pt;
+    margin-right: 20px;
+    font-family: 'Lobster', cursive;
+    font-background: white;
+}
+
+.navbar-text3 {
+    font-background: white;
+    float: center;
+    font-size: 18pt;
+    text-color: white;
+}
+
+.hr {
+  display: block;
+  color: "blue";
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 3px;
+}
+
+.page-header {
+    color: white;
+}
