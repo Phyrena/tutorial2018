@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83bbd7f4-cbc6-41dd-a4a8-afc611a1bb44" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webseite/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/webseite/blog/templates/blog/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webseite/blog/templates/blog/timeline.html" beforeDir="false" afterPath="$PROJECT_DIR$/webseite/blog/templates/blog/timeline.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webseite/web/templates/web/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/webseite/web/templates/web/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webseite/web/templates/web/klassen.html" beforeDir="false" afterPath="$PROJECT_DIR$/webseite/web/templates/web/klassen.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webseite/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/webseite/web/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webseite/web/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webseite/web/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webseite/webseite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/webseite/webseite/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -208,7 +201,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="2" />
     <option name="y" value="586" />
     <option name="width" value="1271" />
@@ -420,20 +413,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="1004" extended-state="7" />
+    <frame x="-4" y="-4" width="1288" height="1004" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20274636" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3299435" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.14802259" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.14802259" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.16836159" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.29943502" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.29943502" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
