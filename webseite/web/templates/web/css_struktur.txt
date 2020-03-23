@@ -2,11 +2,204 @@
 Bsp.:
 STATIC_URL = '/static/web/css/'
 ____________________________________________________________
+KOMMENTARE
+
+Kommentare in CSS schreibt man mit /* Text */
+
+_____________________________________________________________
+FEHLERMELDUNGEN: in CSSS
+
+CSS! Änderung wird nicht Akzeptiert in Chrome?
+
+Lösung: STR + Shift + R  oder mit STR + R
+_____________________________________________________________
+
+ACHTUNG:
+WIRD ETWAS NICHT ANGEZEIGT, IST EIN lEERZEICHEN ZU VIEL ODER ZU WENIG ODER ES FEHLT
+DAS  ";" ZEICHEN!!!!!
+
+_____________________________________________________________
+LINKS:
+
+a: link bearbeitet den Link, auf dem du noch NICHT warst!!!!
+
+a: visited bearbeitet den Link, auf dem du SCHON warst!!!!
+
+a: hover bearbeitet den Link, auf dem die Maus GERADE sich befindest!!!
+Bsp.:
+
+li a {                                      # NUR die Links, welche in der Liste sind, werden bearbeitet!
+    text-decoration:none;                   # Der Unterstrich von einem Link ist weg!
+
+li a.aktiv{                                 # in HTML: <li><a class="aktiv" href="...</a></li>, so
+    background-color: green;                    greifen wir auf die Link-Klasse zu!
+}
+
+DAMIT JETZT der aktive Link nicht die Farbe ändert, wenn wir "a: hover" benutzen schreiben wir in CSS:
+
+li a:hover:not(.ativ) {                     # So wird der a mit der Klasse "aktiv" nicht verändert!
+    background-color: red;
+    color: white;
+}
+______________________________________________________________
+FARBEN:
+background-color: black;        # Ist die Hintergrundfarbe des Tags!
+color: red;                     # Ist die Schriftfarbe!
+
+body {                          # Der gesamte Body der Website hat diese Farbe!
+background-color: black;
+}
+______________________________________________________________
+Image:
+
+# Der gesamte Body der Website hat ein HINTERGRUNDBILD! Das Bild muss in {% static 'web/css/web.css' %}
+ sein!
+
+body {
+    background: url("{% static 'web/img/black-backgrounds-11.jpg' %}") no-repeat center center fixed;
+
+    background-repeat: no-repeat;               #Das Bild wiederholt sich nicht (wiederholt sich immer, wenn es zu klein ist.)!
+    background-position: bottom, center..;      #Man kann das Bid positionieren!
+    background-attachment: fixed;               #Das Bild bleibt immer an der selben Stelle, egal ob wir runter scrollen!
+                                                    (gut für Navigationsleisten)!
+    background-attachment: scroll;              #Das Bild bleibt immer an der postion von "background-position: XXX;",
+                                                auch wenn wir scroolen!
+
+
+
+_______________________________________________________________
+Rahmen ( Border )
+bsp.:
+#div1 {
+    background-color: red;              # Ist die Hintergrundfarbe IM DIV1-Rahmen!!!
+    border-style: solid;                #
+    border-width: 10px;                 # Ramenkante dicker machen!
+    border-color: green;                # Rahmenkante-Farbe!
+    margin: -10px                       # bestimmt den Abstand (margin) vom <div>-Rand zum nächsten
+                                            <div> oder <p> ect,
+   (margin-bottom/left/                     bzw Abstand von links zu unserem Rahmen (margin-left: 110;)!
+    right/ top)
+    padding: 60px 20px 30px 50px;       # Abstand im Borderrahmen zu unserem <div> oder <p> im Border!
+             60px(top) 20px(right) 30px(bottom) 50px(left)
+}
+
+
+_______________________________________________________________
+TEXT / Schriftarten
+Bsp.: p{
+    text-align: justify                         # Text wird zum Blocksatz (Gut für Fenster unterschiede (Handy/PY ect.!
+                center                          # gut für überschriften!
+                left                            # Text ist am linken Rand!
+                right                           # Text ist am rechten Rand!
+                inherit
+
+    text-indent: 50px;                          # Text-Einzug (die erste Zeile eines <p> wird um 50px nach rechts verschoben)
+    text-transform: uppercase                   # Alle Buchstaben haben Großbuchstaben!
+    letter-spacing: 2px;                        #Abstand zwichen den einzelnen Buchstaben wird vergrößert!
+    line-height: 2;                             # Zeilenhöhe (Abstand zur nächsten Zeile + oder -)!
+
+    font-family: "Courier", "Serif"             # Wenn Courier nicht unterstützt wird, benutzt er Serif-Schrift!
+    font-size: 15px;                            # Größe der Schrift!
+    font-style: intalic;                        # Kursiv-Schrift!
+
+    font-variant: small-caps;                   # Die Anfangsbuchstaben von einem neuen Satz sind groß geschrieben!
+
+___________________________________________________________________
+POSITIONEN
+Bsp.:
+#div1 {
+    position: absolut;                  #Das <div> wird nur so lange, wie der Inhalt lang ist.
+                                            (Standart geht es bis zum rechten Rand)!
+    width: 50%;                         # Das <div> nimmt 50% der Seitenbreite ein!
+    z-index: 1;                         #Reihenfolge der Ansicht (wer hat Vorrang und wer wird zum Hintergrund!
+                                        (<div> hat z-index -1 und <p> hat z-index: 1, dann ist der <p>
+                                            im Vordergrund!
+                                            (Wie Background-Layer und Player-Layer in Jump and Run)!!
+
+    position: fixed;                    # Auch wenn runter gescroolt wird, bleibt das "Tag" an der
+                                            selben stelle. (Gut für Menü´s/Navigationsleisten)!!
+
+    position: relative;                 # Die position des Tags kann man verändern, aber die anderen
+    width: 50%;                           "Tags" vor oder danach bleiben an der selben Stelle und
+    top: 100px oder %;                     verschieben sich nicht mit!
+
+
+    display: none;                      # blendet den Tag aus, dieser ist aber noch vorhanden.
+                                            (Dann muss man keinen "Tag" löschen)!!!
+
+
+FLOAT(umschließt ein Bild, wie in einem Buch oder wie aus Microsoft-Word)!
+*Gut für Navigationsleisten die links angeordnet sind!
+Bsp.:
+#div1 {
+    float: left;                        # Das Bild ist links und der Text ist rechts.
+
+#div_link {
+    clear: left;                        # So fängt der Text nicht rechts an, sondern erst unter dem
+                                            Bild. (Das "float: left;" muss aber trotzdem im andern
+                                            "Div-TAG" stehen!!!)
+}
+
+#div1 {
+    overflow: auto;                     # erzeugt eine Scroolbar innerhalb der Div, wenn "a" oder
+                                            "div_link" den "float: right;" gesetzt hat! Das aber auch
+                                            nur, wenn das Div eine kleinere "height" hat als der "a-link"!
+
+    overflow: scroll;                   # erzeugt nicht nur eine Scroolbar von oben nach unten, sondern
+                                            auch eins Bar von links nach rechts!
+
+    *Overflow: auto; ist aber am Sinvollsten!!!
+}
+_________________________________________________________________________________
+NAVIGATIONSLEISTEN
+Bsp.:
+ul {
+    list-style-type: none ;
+    margin: 0;
+    padding: 0;
+    width: 25%;                             # Die Navigations
+    background-color: grey;
+    position: fixed;                        # Die position der Navigationsleiste ist Fest, auch beim
+                                                scroolen!
+    height: 100%;                           # Die Navileiste geht bis zum Boden!
+    overflow: auto;                         # Die Navileiste ist immer im Vordergrund!
+
+
+}
+
+li a {                                      # NUR die Links, welche in der Liste sind, werden bearbeitet!
+    display: block;                         # Jeder einzelne Link ist ein Block!
+    color: black;
+    padding: 10px 0px 10px 15px;              # Abstand zum rand und jeweiligen nachkommenden Link!
+    text-decoration:none;                   # Der Unterstrich von einem Link ist weg!
+
+}
+
+DAMIT der DIV nicht hinter der Navigationsleiste im Hintergrund ist, schreiben wir jetzt noch:
+#div {
+    margin-left: 25%;                       # Wert je nach Navigationsleiste Prozent des WIDTH!
+    padding: 1px 15px;                      # Der Abstand nach der Navileiste erhöht sich!
+    height: 100%;                           # Unser Haupt-Body-Div geht bis zum Boden!
+}
+
+
+weiter ab:
+https://www.youtube.com/watch?v=kWLlgNQf8fg&list=PLNmsVeXQZj7qQz698kYRkkBXJDeXJY_I7&index=13
+
+__________________________________________________________________________________
+LISTEN
+UL {
+    list-style-type: none;              # verbirgt die Aufzählungszeichen (Punkte, Sternchen ect.)
+
+
+}
+
+
 
 
 Die Tags ( <p>, <h1>...), kann man normal, in Klassen, mit ID´s setzen und somit manipiulieren!
 
-Die ID´s in der CSS-File werden  mit dem # und den Namen zugewiesen.
+Die ID´S in der CSS-File werden  mit dem # und den Namen zugewiesen.
 Bsp.:
 #navbar_name {
 background-color: white;
@@ -19,7 +212,7 @@ background-color: white;
 
 
 
-Die Klassen in der CSS-File werden mit einem Punkt und den Klassen-Namen zugewiesen.
+Die KLASSEN in der CSS-File werden mit einem Punkt und den Klassen-Namen zugewiesen.
 Bsp.:
 .Klassen-Name {
 background-color: white;

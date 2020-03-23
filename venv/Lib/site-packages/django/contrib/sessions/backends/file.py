@@ -59,7 +59,10 @@ class SessionStore(SessionBase):
         Return the modification time of the file storing the session's content.
         """
         modification = os.stat(self._key_to_file()).st_mtime
-        return datetime.datetime.fromtimestamp(modification, timezone.utc if settings.USE_TZ else None)
+        if settings.USE_TZ:
+            modification = datetime.datetime.utcfromtimestamp(modification)
+            return modification.replace(tzinfo=timezone.utc)
+        return datetime.datetime.fromtimestamp(modification)
 
     def _expiry_date(self, session_data):
         """
@@ -72,7 +75,7 @@ class SessionStore(SessionBase):
     def load(self):
         session_data = {}
         try:
-            with open(self._key_to_file(), "rb") as session_file:
+            with open(self._key_to_file(), "r", encoding="ascii") as session_file:
                 file_data = session_file.read()
             # Don't fail if there is no data in the session file.
             # We may have opened the empty placeholder file.

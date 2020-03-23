@@ -1,77 +1,96 @@
 {% load static %}
 
+
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="keywords" content="Django, Web-development, Game">
+        <meta name="description" content="Django Project with a Game">
+        <meta http-equiv="refresh" content="500000"> <!-- alle 5 Sekunden wird die Seite neu geladen -->
+        <meta name="robots" content="index, follow">  <!-- google durchsucht die Startseite(Index.html) und mit "follow" die Unterseiten(Klassen, login, logoout) -->
+        <meta name="revisit-after" content="5 month">  <!-- Google speichert die Seite 5 Monate lang damit unsere Seite schneller geladen wird. -->
+
         <title>{% block title %} Mein Game-Forum {% endblock %}</title>
+
+
+        <!-- Knöpfe -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <!-- CSS-Style -->
         <link rel="stylesheet" href="{% static 'web/css/web.css' %}">
-        <!-- Schrift style -->
-        <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+        <!-- Schrift-Style -->
+        <!-- Loobster -->
+        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+        <!-- Marck Script -->
+        <link href="https://fonts.googleapis.com/css?family=Marck+Script&display=swap" rel="stylesheet">
+        <!-- Press+Start+2 -->
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <!-- 'Mandali' -->
+        <link href="https://fonts.googleapis.com/css?family=Mandali&display=swap" rel="stylesheet">
+
     </head>
 
-    <body>
+    <!-- Hintergrundbild -->
+    <style>
+            body {
+                background: url("{% static 'web/img/black-backgrounds-11.jpg' %}") no-repeat center center fixed;
+            }
+    </style>
+
+    <!-- NAvigationsleiste -->
     <header>
-        <nav id="header">
-        <div id="Logo">
-            <a class="navbar-brand" href="#">Games</a>
-            <span class="navbar-text1">
+
+        <nav class="header2">
+            <div>
+            <span class="navbar-account"><b>
                 {% if request.user.is_authenticated %}
-                <a href="{% url 'web:logout' %}"><strong>Logout |</strong></a>
+                <a href="{% url 'web:logout' %}">Logout |</a>
                 {% else %}
-                <a href="{% url 'web:login' %}" class="btn btn-secondary btn-info"><b>Login</b></a>
-                <a href="{% url 'web:register' %}" class="btn btn-secondary btn-info"><b>Account anlegen</b></a>
+                <a href="{% url 'web:login' %}" class="btn btn-secondary btn-info">Login |</a>
+                <a href="{% url 'web:register' %}" class="btn btn-secondary btn-info">Account anlegen</a>
                 {% endif %}
-            </span>
-        </div>
-    </nav>
-    <hr size="10" color="black" >
-    <nav id="header2">
-        <b>
-        <span class="navbar-text3">
-            <a id="hover" href="{% url 'web:spiel_Website' %}">Spiel-Website |</a>
-            <a href="{% url 'web:klassen' %}">Klassen |</a>
-            <a href="{% url 'web:forum' %}">Forum |</a>
-            <a href="{% url 'web:neuste_beiträge' %}">Neuste_Beiträge |</a>
-            <a href="{% url 'web:team' %}">Team |</a>
-            <a href="{% url 'web:downloads' %}">Downloads</a>
-        </span>
-        </b>
-    </nav>
-    <br>
+
+
+            </b></span>
+            </div>
+        </nav>
+
+        <nav class="header2">
+            <div>
+            <span class="haupt_navbar"><b>
+                <a href="{% url 'web:to_do_list' %}">To do Liste |</a>
+                <a href="{% url 'web:spiel_Website' %}">Spiel-Website |</a>
+                <a href="{% url 'web:klassen' %}">Klassen |</a>
+                <a href="{% url 'web:forum' %}">Forum |</a>
+                <a href="{% url 'web:neuste_beiträge' %}">Neuste Beiträge |</a>
+                <a href="{% url 'web:team' %}">Team |</a>
+                <a href="{% url 'web:downloads' %}">Downloads</a>
+            </b></span>
+            </div>
+        </nav>
+
+
     </header>
-    <hr>
+    <!--<hr size="30" color="black" >        <!-- Malt einen Strich mit 10er stärke -->
+
     <br>
         {% block authForm %}
         {% endblock %}
     <br>
-        <h3>ABOUT</h3>
-        <hr>
-        <p>persöhnliches Zeug</p>
-        <br>
-    <br>
-        <h3>ARBEITEN</h3>
-        <hr>
-        <p>programmierte Websites</p>
-        <br>
-        <ul>
-            <li><img src=" {% static 'web/img/eisriesen.png' %}" alt="Eisriesen_symbol"></li>
-            <li><a href="#"><img src="https://via.placeholder.com/270x160" alt="Projektname2"></a></li>
-            <li><a href="#"><img src="https://via.placeholder.com/270x160" alt="Projektname3"></a></li>
-            <li><a href="#"><img src="https://via.placeholder.com/270x160" alt="Projektname4"></a></li>
-            <li><a href="#"><img src="https://via.placeholder.com/270x160" alt="Projektname5"></a></li>
-        </ul>
-        <br>
-    <br>
-    <br>
+
+
+
+
     <footer>
         <h3>IMPRESSUM</h3>
         <hr>
         <p>erreichbarkeit</p>
         <br>
-        <br>
     </footer>
 
-    </body>
+
 </html>
 
 

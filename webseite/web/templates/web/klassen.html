@@ -1,25 +1,31 @@
 {% extends 'web/base.html' %}
 {% load static %}
 
-{% block title %} BlogPost - Account anlegen {% endblock %}
+{% block title %} BlogPost - Klassen {% endblock %}
 
 {% block authForm %}
-
-    <div style="background-color:#4648a4">
-        <h1 class="hüberschrift">Priester / Hexenmeister (Nützliche Skills/Eliteskills)</h1>
-        <table border="1">
-            <!--Klassenfertigkeiten-Tabelle-->
+<!--PRIESTER-->
+<details>
+    <summary class ="ausklappkomentar">
+        <b class ="ausklapptext">PRIESTER</b>
+    </summary>
+    <div>
+        <!--Priester / Hexenmeister-->
+        <table class="tableclass">
             <tr>
-                <td class ="skillname">
+                <td class ="skillname"  width="25%">
+                    <h2 class="haupt_überschrift">Priester / Hexenmeister</h2>
                     <div class="div1">
-                        <h3>Hauch der Wiederbelebung</h3>
-                        <h3>(lvl 20)</h3>
+                        <img src=" {% static 'web/img/Hauch_der_weiderbelebung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Hauch der Wiederbelebung <br>(lvl 20)</h3>
+
                     </div>
                 </td>
                 <td class ="skillbeschreibung">
-                    Dieser Skill ist Gruppen übergreifend und kann beim laufen benutzt werden.
+                    Dieser Skill ist Gruppen übergreifend und kann beim laufen benutzt werden.<br><br>
                         Sehr gut in der Instanz: Tikal, Inferno, Eisriesen beim Trash oder bei den
                         Bossen, wenn man keine Zeit hat um Gruppenheilung zu benutzen.
+                    <br><br><br>
                         Man sollte diesen Skill aber 2x hinter einander einsetzen, wenn die Gruppe/Raid viel
                         Schaden bekommt, da der Heil-Wert pro Person halbiert wird.
                     <br>
@@ -30,12 +36,12 @@
                 <br>
             <tr>
                 <td class ="skillname">
-                <h3>Gebet des Trübsals</h3>
-                <h3>(lvl 25)</h3>
+                <img src=" {% static 'web/img/Gebet_des_Trübsals.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Gebet des Trübsals <br>(lvl 25)</h3>
                 </td>
                 <td class ="skillbeschreibung">
-                    <b>Dieser Skill ist unser stärkster Heal, da er nicht nur den Spieler gut heilen kann,
-                        sondern auch seine Physische und magische Verteidigung erhöht.
+                    Unser stärkster Single-Heal, da er nicht nur den Spieler gut heilen kann,
+                        sondern auch seine Physische und magische Verteidigung erhöht.<br><br>
                         Sollte aber nicht eingesetzt werden, wenn das Ziel weniger als 20% life hat und
                         permanenten Schaden vom Gegner bekommt, da ist Schnellheilung besser.
                         <br><br>
@@ -44,92 +50,2797 @@
                         nur 1 oder 2!
                         <br><br>
                         Am besten 1x Gebet des Trübsals, dann 4-6 mal Schnellheilung und dann wieder Gebet..,
-                        auf den Tank vorzugsweise. (So bleibt die Verteidigungserhöhung permanent auf dem Spieler
-                        und dein Fokus kann sich regenerieren)!</b>
+                        auf den Tank vorzugsweise. <br>
+                        (So bleibt die Verteidigungserhöhung permanent auf dem Spieler
+                        und dein Fokus kann sich regenerieren)!
+                </td>
+            </tr>
+
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Quellwasser.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Geistige Führung <br>(lvl 40)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    "Gesegnetes Quellwasser" erhöht die Heilung auf die Spieler, welche diesen Buff haben!
                 </td>
             </tr>
             <tr>
-                <td class ="skillname">
-                <h2 >Verkörperung des Geistes <br>(lvl 50)</h2>
-                    <h4><i>muss mit</i></h4>
-                    <h2>Lebenswoge</h2>
-                    <h3>(lvl 70)</h3>
-                    <h4><i>kombiniert werden</i></h4>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Verkörperung des Geistes.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Verkörperung des Geistes (lvl 50)</h3>
+                    <h4 class="hüberschrift"><i>muss mit</i></h4>
+                    <img src=" {% static 'web/img/Lebenswoge.png ' %}" alt="bild">
+                    <h3 class="hüberschrift">Lebenswoge (lvl 70)</h3>
+                    <h4 class="hüberschrift"><i>kombiniert werden</i></h4>
                 </td>
                 <td class ="skillbeschreibung">
-                    <b>Dieser Skill ist unser stärkster Heal, da er nicht nur den Spieler gut heilen kann,
-                        sondern auch seine Physische und magische Verteidigung erhöht.
+                    Dieser Skill ist unser stärkster Raid-Heal, da er die Spieler im Ganzen Raid heilt und eine
+                    sehr hohe Range hat!<br><br><br>
+                    Läuft Lebenswoge aus, heilt man mit "Gebet des Trübsals" den Tank. Durch die 4 Heil-Ticks weden auch
+                    Leute geheilt, welche plötzlich wenig Leben haben.
+                    <br><br><br>
+                    Auch wenn Verkörperung des Geistes weniger Cooldown hat, als Lebenswoge, sollten diese beiden Skills
+                    immer zusammen benutzt werden, da Lebenswoge alleine nicht als Heilerskill taugt.
+                    <br><br><br>
+                    Ausserdem solte man immer an meherern Spielen in der näheren Umgebung haben, damit man diese
+                        gut supportet (10% mehr Werte)!
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <!--Priester / Ritter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 class="haupt_überschrift">Priester / Ritter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/lebensverknüpfung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Lebensverknüpfung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung"  width="80%">
+                    Sehr hilfreich, weil man so die eigenen Lebenspunkte nicht ständig beobachten muss!
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Skill_pri_kni60.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Herrliches Kräuseln<br>lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Diese "instant"-Heilung kann sehr hilfreich sein um Leute, während des Laufens zu heilen
+                    und man weiss, das die Schnellheilung zu "langsam" wäre!
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schild der Disziplin.png' %}" alt="bild" width="65" height="65">
+                <h1 class="hüberschrift">Vorteile</h1>
+                </td>
+                <td class ="skillbeschreibung">
+                    Durch das tragen eines Schildes und dem Skill: "Schild der Disziplin" hälst du mehr aus,
+                        als andere Stoffklassen!
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Kundschafter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h2 class="haupt_überschrift">Priester / Kundschafter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Umarmung des Wassergeistes.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Umarmung des Wassergeistes <br>lvl 15)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    Mehr dmg für die Magischen DD´s und somit liegt der Boss schneller! Also als erstes auf
+                        MAX-LVL skillen!
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Heilender Schuss.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Heilender Schuss <br>(lvl 35)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Heilt sehr gut und erzeugt einen guten Hot! Sollte benutzt werden wenn Nahkämpfer und
+                        Fernkämpfer getrennt in den Gruppen sortiert sind, damit es efektiver wird!
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Bereich der leichten Kette.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Bereich der leichten Kette <br>(lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Wie der lvl 35er Skill sollten die Gruppen sortiert werden (Alle Nahkämpfer und der Tank in
+                        die Gruppe des Piresters positionieren), damit "Kette des Lichts"
+                        sofort alle in der Gruppe heilen kann!
+
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Champion-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 class="haupt_überschrift">Priester / Champion</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Turm der Vitalität.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Turm der Vitalität <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    Sehr Hilfreich am Anfang un die DD´s beim "BURST" zu unterstützen.
+                    Erhöht die Werte der Spieler um 6%!
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Lichtverbindung.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Lichtverbindung <br>(lvl 70)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Sollte nur auf den Tank gewirkt werden, damit er schneller reagieren kann, bei schweren
+                    Boss-Ebents!
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Magier-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 class="haupt_überschrift">Priester / Magier</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Element Verteidigung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Elementarverteidigung <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    Die Gruppe bekommt 15 Sekunden lang 9% weniger Schaden (3 Stacks). Man sollte den Skill nur
+                    alle 5 Sekunden nach casten, damit der "Gruppenheilung-Debuff" nicht hoch stackt!
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Schurke-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 class="haupt_überschrift">Priester / Schurke</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Schnelles Spellcasting.png' %}" alt="bild">
+                        <h3 class="hüberschrift">Schnelles Zaubern <br>lvl 25)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    Zaubergeschwindigkeit wird um 18% permanent erhöht!
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenwut.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Schattenwut <br>(lvl 40)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Erhöht die kritische magische Trefferquote der Gruppe um 277,9 Punkte (LVL 104)!
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenfee.png ' %}" alt="bild">
+                <h2 class="hüberschrift">Schattenfee <br>(lvl 50)</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    Erhöht die Magische Angriffskraft um 10%!
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Krieger-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 class="haupt_überschrift">Priester / Krieger</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Kettenrüstung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Kettenrüstungs-Skill <br>lvl 70)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    Kann Kettenrüstung tragen, was mehr dmg bedeutet und man hält durch die erhöhte Verteidigung
+                    der Kettenrüstung mehr aus, als ein Stoffträger!
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <div>
+
+        </div>
+
+    </div>
+</details>
+<br>
+<br>
+<!--Hexenmeister-->
+<details>
+    <summary class ="ausklappkomentar">
+        <b class ="ausklapptext">HEXENMEISTER</b>
+    </summary>
+    <div>
+        <!--Hexenmeister / Champion -->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h2 class="haupt_überschrift">Hexenmeister / Champion</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Saces_Wut.png' %}" alt="bild">
+                        <h3 class="hüberschrift">Saces Wut (lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    Wenn die Fertigkeit während Ihrer nächsten 5 Angriffe einen kritischen Treffer erzielt,
+                    erhöht sich der kritische magische Schaden um 50%
+                    <br>
+                    <br>
+                    <br>
+                    Der Skill hat nur 30 Sekunden Cooldown, was uns im Gegensatz zu den anderen DD´s, einen großen
+                    Vorteil bringt!
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Mind_Rune.png' %}" alt="bild">
+                <h3 class="hüberschrift">Gedankenrune (lvl 25)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Erhöht die maximale HP um 50,0 % und die Intelligenz um 400 Punkte, außerdem erhöht
+                    der Skill die Wut alle 2 Sekunden um 10 Punkte für 15 Minuten.
+                    <br>
+                    <br>
+                    <br>
+                    (Den Zorn braucht ihr NUR für den Skill: Zornesveredelung lvl 60)!
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Rune_Energy_Devotion.png' %}" alt="bild">
+                <h3 class="hüberschrift">Runen-Energie-Hingabe <br>(lvl 35)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Reduziert die zugefügte Aggro um 40% und erhöht die magische Kraft, 20 Sekunden lang um 35%.
+                    Stellt auch sofort 35 Punkte Wut wieder her.
+                    <br>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Saces_Impulse.png' %}" alt="bild">
+                <h3 class="hüberschrift">Saces Ansporn<br>(lvl 45)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Nicht nur das dieser Skill unsere Intelligenz 60 Sekunden lang um 83,9% erhöht, er stellt auch
+                     jede Sekunde 4% HP wieder her!
+                    <br><br>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Zornveredelung.png' %}" alt="bild">
+                <h3 class="hüberschrift">Zornesveredelung<br>(lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Verbraucht 100 Wut und ergibt 6 psi Punkte.
+                    <br><br><br>
+                    ACHTUNG: Wenn du nicht im Kampf bist, dann verlierst du 5-10 Zorn, nach drücken des Skills!
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Psychischen Anzapfen.png' %}" alt="bild">
+                <h3 class="hüberschrift">Psychischen Anzapfen<br>(lvl 70)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Wenn ein Ziel von psychischen Pfeilen getroffen wurde, besteht die Möglichkeit (gefühlt 10%),<br>
+                    dass dein magischer Schaden erhöht wird und ein Schild aufgerufen wird,
+                    der Schaden von bis zu 10% Ihrer HP absorbiert.
+                    <br><br><br>
+                    Der Buff hält nur 5 Sekunden, der Schaden wird um 60% erhöht!
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Hexenmeister / Magier -->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2  class="haupt_überschrift">Hexenmeister / Magier</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/lebensverknüpfung.png' %}" alt="bild">
+                        <h3 class="hüberschrift">Lebensverknüpfung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung"  width="80%">
+                    <b>Sehr hilfreich, weil man so die eigenen Lebenspunkte nicht ständig beobachten muss!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Skill_pri_kni60.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Splendor Ripple <br>lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Diese "instant"-Heilung kann sehr Hilfreich sein, um auch beim wärend des laufens, Leute zu heilen
+                    und man weiß, dass die Schnellheilung zu "langsam" wäre</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schild der Disziplin.png' %}" alt="bild" width="65" height="65">
+                <h2  class="hüberschrift">Vorteile</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Durch das tragen eines Schildes und dem Skill:"Schild der Disziplin" hält man mehr aus,
+                        als andere Stoffklassen</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+
+
+
+</details>
+<br>
+<br>
+<!--Magier-->
+<details>
+    <summary class ="ausklappkomentar">
+        <b class ="ausklapptext">MAGIER</b>
+    </summary>
+    <div>
+        <!--Priester / Hexenmeister-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h3 style="background-color:black" class="hüberschrift">Priester / Hexenmeister</h3>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Hauch_der_weiderbelebung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Hauch der Wiederbelebung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    Dieser Skill ist Gruppen übergreifend und kann beim laufen benutzt werden.<br><br>
+                        Sehr gut in der Instanz: Tikal, Inferno, Eisriesen beim Trash oder bei den
+                        Bossen, wenn man keine Zeit hat um Gruppenheilung zu benutzen.
+                    <br><br><br>
+                        Man sollte diesen Skill aber 2x hinter einander einsetzen, wenn die Gruppe/Raid viel
+                        Schaden bekommt, da der Heil-Wert pro Person halbiert wird.
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname">
+                <img src=" {% static 'web/img/Gebet_des_Trübsals.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Gebet des Trübsals <br>(lvl 25)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Unser stärkster Single-Heal, da er nicht nur den Spieler gut heilen kann,
+                        sondern auch seine Physische und magische Verteidigung erhöht.<br><br>
                         Sollte aber nicht eingesetzt werden, wenn das Ziel weniger als 20% life hat und
                         permanenten Schaden vom Gegner bekommt, da ist Schnellheilung besser.
                         <br><br>
-                    ACHTUNG, wenn ihr kein Fokus mehr habt, könnt ihr diesen Skill auch nicht einsetzen und wenn
-                    der Spieler aus deiner Cast-Range verschwindet, dann kommen nicht 4 Ticks an Heilung an, sondern
-                    nur 1 oder 2!
+                        ACHTUNG, wenn ihr kein Fokus mehr habt, könnt ihr diesen Skill auch nicht einsetzen und wenn
+                        der Spieler aus deiner Cast-Range verschwindet, dann kommen nicht 4 Ticks an Heilung an, sondern
+                        nur 1 oder 2!
                         <br><br>
-                    Am besten 1x Gebet des Trübsals, dann 4-6 mal Schnellheilung und dann wieder Gebet..,
-                    auf den Tank vorzugsweise. (So bleibt die Verteidigungserhöhung permanent auf dem Spieler
-                    und dein Fokus kann sich regenerieren)!</b>
+                        Am besten 1x Gebet des Trübsals, dann 4-6 mal Schnellheilung und dann wieder Gebet..,
+                        auf den Tank vorzugsweise. <br>
+                        (So bleibt die Verteidigungserhöhung permanent auf dem Spieler
+                        und dein Fokus kann sich regenerieren)!
                 </td>
             </tr>
-            <br>
-                <br>
+
             <tr>
-                <td class ="skillname">
-                <h3>Gebet des Trübsals2</h3>
-                <h3>(lvl 25)</h3>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Quellwasser.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Geistige Führung <br>(lvl 40)</h3>
                 </td>
                 <td class ="skillbeschreibung">
-                    <b>Dieser Skill ist unser stärkster Heal, da er nicht nur den Spieler gut heilen kann,
-                        sondern auch seine Physische und magische Verteidigung erhöht. <br>
-                        Sollte aber nicht eingesetzt werden, wenn das Ziel weniger als 20% life hat und
-                        permanenten Schaden vom Gegner bekommt, da ist Schnellheilung besser.<br><br>
-                        ACHTUNG, wenn ihr kein Fokus mehr habt, könnt ihr diesen Skill auch nicht einsetzen und wenn<br>
-                        der Spieler aus deiner Cast-Range verschwindet, dann kommen nicht 4 Ticks an Heilung an, sondern<br>
-                        nur 1 oder 2!<br>
-                        Am besten 1x Gebet des Trübsals, dann 4-6 mal Schnellheilung und dann wieder Gebet..,<br>
-                        auf den Tank vorzugsweise. (So bleibt die Verteidigungserhöhung permanent auf dem Spieler
-                        und dein Fokus kann sich regenerieren)!</b>
+                    <b>"Gesegnetes Quellwasser" erhöht die Heilung auf die Spieler, welche diesen Buff haben!</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Verkörperung des Geistes.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Verkörperung des Geistes <br>(lvl 50)</h3>
+                    <h2 class="hüberschrift"><i>muss mit</i></h2>
+                    <img src=" {% static 'web/img/Lebenswoge.png ' %}" alt="bild">
+                    <h3 class="hüberschrift">Lebenswoge <br>(lvl 70)</h3>
+                    <h3 class="hüberschrift"><i>kombiniert werden</i></h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Dieser Skill ist unser stärkster Raid-Heal, da er die Spieler im Ganzen Raid heilt und eine
+                    sehr hohe Range hat!<br><br>
+                    Läuft Lebenswoge aus, heilt man mit "Gebet des Trübsals" den Tank. Durch die 4 Heil-Ticks weden auch
+                    Leute geheilt, welche plötzlich wenig Leben haben.
+                    <br><br>
+                    Auch wenn Verkörperung des Geistes weniger Cooldown hat, als Lebenswoge, sollten diese beiden Skills
+                    immer zusammen benutzt werden, da Lebenswoge alleine nicht als Heilerskill taugt.
+                    <br><br>
+                    Ausserdem solte man immer an meherern Spielen in der näheren Umgebung haben, damit man diese
+                        gut supportet (10% mehr Werte)!</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <!--Priester / Ritter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Ritter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/lebensverknüpfung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Lebensverknüpfung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung"  width="80%">
+                    <b>Sehr hilfreich, weil man so die eigenen Lebenspunkte nicht ständig beobachten muss!</b>
                     <br>
                     <br>
                 </td>
             </tr>
-            <br>
+                <br>
                 <br>
             <tr>
-                <td class ="skillname">
-                <h3>Gebet des Trübsals2</h3>
-                <h3>(lvl 25)</h3>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Skill_pri_kni60.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Herrliches Kräuseln<br>lvl 60)</h3>
                 </td>
                 <td class ="skillbeschreibung">
-                    <b>Dieser Skill ist unser stärkster Heal, da er nicht nur den Spieler gut heilen kann,
-                        sondern auch seine Physische und magische Verteidigung erhöht. <br>
-                        Sollte aber nicht eingesetzt werden, wenn das Ziel weniger als 20% life hat und
-                        permanenten Schaden vom Gegner bekommt, da ist Schnellheilung besser.<br><br>
-                    ACHTUNG, wenn ihr kein Fokus mehr habt, könnt ihr diesen Skill auch nicht einsetzen und wenn<br>
-                    der Spieler aus deiner Cast-Range verschwindet, dann kommen nicht 4 Ticks an Heilung an, sondern<br>
-                    nur 1 oder 2!<br>
-                    Am besten 1x Gebet des Trübsals, dann 4-6 mal Schnellheilung und dann wieder Gebet..,<br>
-                    auf den Tank vorzugsweise. (So bleibt die Verteidigungserhöhung permanent auf dem Spieler
-                    und dein Fokus kann sich regenerieren)!</b>
-                    <br>
-                    <br>
+                    <b>Diese "instant"-Heilung kann sehr hilfreich sein um Leute, während des Laufens zu heilen
+                    und man weiss, das die Schnellheilung zu "langsam" wäre</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schild der Disziplin.png' %}" alt="bild" width="65" height="65">
+                <h2 class="hüberschrift">Vorteile</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Durch das tragen eines Schildes und dem Skill:"Schild der Disziplin" hält man mehr aus,
+                        als andere Stoffklassen</b>
                 </td>
             </tr>
         </table>
     </div>
         <br>
         <br>
+    <div>
+        <!--Priester / Kundschafter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Kundschafter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Umarmung des Wassergeistes.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Umarmung des Wassergeistes <br>lvl 15)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Mehr dmg für die Magischen DD´s und somit liegt der Boss schneller! Also als erstes auf
+                        MAX-LVL skillen</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Heilender Schuss.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Heilender Schuss <br>(lvl 35)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Heilt sehr gut und erzeugt einen guten Hot! Sollte benutzt werden wenn Nahkämpfer und
+                        Fernkämpfer getrennt in den Gruppen sortiert sind, damit es efektiver wird!</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Bereich der leichten Kette.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Bereich der leichten Kette <br>(lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Wie der lvl 35er Skill sollten die Gruppen sortiert werden (Alle Nahkämpfer und der Tank in
+                        die Gruppe des Piresters positionieren), damit "Kette des Lichts"
+                        sofort alle in der Gruppe heilen kann!
+                       </b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Champion-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Champion</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Turm der Vitalität.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Turm der Vitalität <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Sehr Hilfreich am Anfang un die DD´s beim "BURST" zu unterstützen!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Lichtverbindung.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Lichtverbindung <br>(lvl 70)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Sollte nur auf den Tank gewirkt werden, damit er schneller reagieren kann, bei schweren
+                    Boss-Ebents!</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Magier-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Magier</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Element Verteidigung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Elementarverteidigung <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Die Gruppe bekommt 15 Sekunden lang 9% weniger Schaden (3 Stacks). Man sollte den Skill nur
+                    alle 5 Sekunden nach casten, damit der "Gruppenheilung-Debuff" nicht hoch stackt!!!!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Schurke-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Schurke</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Schnelles Spellcasting.png' %}" alt="bild">
+                        <h3 class="hüberschrift">Schnelles Zaubern <br>lvl 25)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Zaubergeschwindigkeit wird um 18% erhöht</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenwut.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Schattenwut <br>(lvl 40)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Erhöht die kritische magische Trefferquote der Gruppe um 277,9 (LVL 104) </b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenfee.png ' %}" alt="bild">
+                <h2 class="hüberschrift">Schattenfee <br>(lvl 50)</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Erhöht die Magische Angriffskraft um 10%</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Krieger-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Krieger</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Kettenrüstung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Kettenrüstungs-Skill <br>lvl 70)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Kann Kettenrüstung tragen, was mehr dmg bedeutet!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </div>
         <br>
         <div>
-        <table>
-            <tr>
-                <td>
 
+        </div>
+
+    </div>
+</details>
+<br>
+<br>
+<!--Krieger-->
+<details>
+    <summary class ="ausklappkomentar">
+        <b class ="ausklapptext">KRIEGER</b>
+    </summary>
+    <div>
+        <!--Priester / Hexenmeister-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h3 style="background-color:black" class="hüberschrift">Priester / Hexenmeister</h3>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Hauch_der_weiderbelebung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Hauch der Wiederbelebung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    Dieser Skill ist Gruppen übergreifend und kann beim laufen benutzt werden.<br><br>
+                        Sehr gut in der Instanz: Tikal, Inferno, Eisriesen beim Trash oder bei den
+                        Bossen, wenn man keine Zeit hat um Gruppenheilung zu benutzen.
+                    <br><br><br>
+                        Man sollte diesen Skill aber 2x hinter einander einsetzen, wenn die Gruppe/Raid viel
+                        Schaden bekommt, da der Heil-Wert pro Person halbiert wird.
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname">
+                <img src=" {% static 'web/img/Gebet_des_Trübsals.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Gebet des Trübsals <br>(lvl 25)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Unser stärkster Single-Heal, da er nicht nur den Spieler gut heilen kann,
+                        sondern auch seine Physische und magische Verteidigung erhöht.<br><br>
+                        Sollte aber nicht eingesetzt werden, wenn das Ziel weniger als 20% life hat und
+                        permanenten Schaden vom Gegner bekommt, da ist Schnellheilung besser.
+                        <br><br>
+                        ACHTUNG, wenn ihr kein Fokus mehr habt, könnt ihr diesen Skill auch nicht einsetzen und wenn
+                        der Spieler aus deiner Cast-Range verschwindet, dann kommen nicht 4 Ticks an Heilung an, sondern
+                        nur 1 oder 2!
+                        <br><br>
+                        Am besten 1x Gebet des Trübsals, dann 4-6 mal Schnellheilung und dann wieder Gebet..,
+                        auf den Tank vorzugsweise. <br>
+                        (So bleibt die Verteidigungserhöhung permanent auf dem Spieler
+                        und dein Fokus kann sich regenerieren)!
+                </td>
+            </tr>
+
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Quellwasser.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Geistige Führung <br>(lvl 40)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>"Gesegnetes Quellwasser" erhöht die Heilung auf die Spieler, welche diesen Buff haben!</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Verkörperung des Geistes.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Verkörperung des Geistes <br>(lvl 50)</h3>
+                    <h2 class="hüberschrift"><i>muss mit</i></h2>
+                    <img src=" {% static 'web/img/Lebenswoge.png ' %}" alt="bild">
+                    <h3 class="hüberschrift">Lebenswoge <br>(lvl 70)</h3>
+                    <h3 class="hüberschrift"><i>kombiniert werden</i></h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Dieser Skill ist unser stärkster Raid-Heal, da er die Spieler im Ganzen Raid heilt und eine
+                    sehr hohe Range hat!<br><br>
+                    Läuft Lebenswoge aus, heilt man mit "Gebet des Trübsals" den Tank. Durch die 4 Heil-Ticks weden auch
+                    Leute geheilt, welche plötzlich wenig Leben haben.
+                    <br><br>
+                    Auch wenn Verkörperung des Geistes weniger Cooldown hat, als Lebenswoge, sollten diese beiden Skills
+                    immer zusammen benutzt werden, da Lebenswoge alleine nicht als Heilerskill taugt.
+                    <br><br>
+                    Ausserdem solte man immer an meherern Spielen in der näheren Umgebung haben, damit man diese
+                        gut supportet (10% mehr Werte)!</b>
                 </td>
             </tr>
         </table>
-        </div>
     </div>
+    <div>
+        <!--Priester / Ritter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Ritter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/lebensverknüpfung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Lebensverknüpfung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung"  width="80%">
+                    <b>Sehr hilfreich, weil man so die eigenen Lebenspunkte nicht ständig beobachten muss!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Skill_pri_kni60.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Herrliches Kräuseln<br>lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Diese "instant"-Heilung kann sehr hilfreich sein um Leute, während des Laufens zu heilen
+                    und man weiss, das die Schnellheilung zu "langsam" wäre</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schild der Disziplin.png' %}" alt="bild" width="65" height="65">
+                <h2 class="hüberschrift">Vorteile</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Durch das tragen eines Schildes und dem Skill:"Schild der Disziplin" hält man mehr aus,
+                        als andere Stoffklassen</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Kundschafter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Kundschafter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Umarmung des Wassergeistes.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Umarmung des Wassergeistes <br>lvl 15)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Mehr dmg für die Magischen DD´s und somit liegt der Boss schneller! Also als erstes auf
+                        MAX-LVL skillen</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Heilender Schuss.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Heilender Schuss <br>(lvl 35)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Heilt sehr gut und erzeugt einen guten Hot! Sollte benutzt werden wenn Nahkämpfer und
+                        Fernkämpfer getrennt in den Gruppen sortiert sind, damit es efektiver wird!</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Bereich der leichten Kette.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Bereich der leichten Kette <br>(lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Wie der lvl 35er Skill sollten die Gruppen sortiert werden (Alle Nahkämpfer und der Tank in
+                        die Gruppe des Piresters positionieren), damit "Kette des Lichts"
+                        sofort alle in der Gruppe heilen kann!
+                       </b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Champion-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Champion</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Turm der Vitalität.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Turm der Vitalität <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Sehr Hilfreich am Anfang un die DD´s beim "BURST" zu unterstützen!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Lichtverbindung.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Lichtverbindung <br>(lvl 70)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Sollte nur auf den Tank gewirkt werden, damit er schneller reagieren kann, bei schweren
+                    Boss-Ebents!</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Magier-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Magier</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Element Verteidigung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Elementarverteidigung <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Die Gruppe bekommt 15 Sekunden lang 9% weniger Schaden (3 Stacks). Man sollte den Skill nur
+                    alle 5 Sekunden nach casten, damit der "Gruppenheilung-Debuff" nicht hoch stackt!!!!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Schurke-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Schurke</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Schnelles Spellcasting.png' %}" alt="bild">
+                        <h3 class="hüberschrift">Schnelles Zaubern <br>lvl 25)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Zaubergeschwindigkeit wird um 18% erhöht</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenwut.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Schattenwut <br>(lvl 40)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Erhöht die kritische magische Trefferquote der Gruppe um 277,9 (LVL 104) </b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenfee.png ' %}" alt="bild">
+                <h2 class="hüberschrift">Schattenfee <br>(lvl 50)</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Erhöht die Magische Angriffskraft um 10%</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Krieger-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Krieger</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Kettenrüstung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Kettenrüstungs-Skill <br>lvl 70)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Kann Kettenrüstung tragen, was mehr dmg bedeutet!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <div>
 
+        </div>
 
+    </div>
+</details>
+<br>
+<br>
+<!--Schurke-->
+<details>
+    <summary class ="ausklappkomentar">
+        <b class ="ausklapptext">SCHURKE</b>
+    </summary>
+    <div>
+        <!--Priester / Hexenmeister-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h3 style="background-color:black" class="hüberschrift">Priester / Hexenmeister</h3>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Hauch_der_weiderbelebung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Hauch der Wiederbelebung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    Dieser Skill ist Gruppen übergreifend und kann beim laufen benutzt werden.<br><br>
+                        Sehr gut in der Instanz: Tikal, Inferno, Eisriesen beim Trash oder bei den
+                        Bossen, wenn man keine Zeit hat um Gruppenheilung zu benutzen.
+                    <br><br><br>
+                        Man sollte diesen Skill aber 2x hinter einander einsetzen, wenn die Gruppe/Raid viel
+                        Schaden bekommt, da der Heil-Wert pro Person halbiert wird.
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname">
+                <img src=" {% static 'web/img/Gebet_des_Trübsals.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Gebet des Trübsals <br>(lvl 25)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Unser stärkster Single-Heal, da er nicht nur den Spieler gut heilen kann,
+                        sondern auch seine Physische und magische Verteidigung erhöht.<br><br>
+                        Sollte aber nicht eingesetzt werden, wenn das Ziel weniger als 20% life hat und
+                        permanenten Schaden vom Gegner bekommt, da ist Schnellheilung besser.
+                        <br><br>
+                        ACHTUNG, wenn ihr kein Fokus mehr habt, könnt ihr diesen Skill auch nicht einsetzen und wenn
+                        der Spieler aus deiner Cast-Range verschwindet, dann kommen nicht 4 Ticks an Heilung an, sondern
+                        nur 1 oder 2!
+                        <br><br>
+                        Am besten 1x Gebet des Trübsals, dann 4-6 mal Schnellheilung und dann wieder Gebet..,
+                        auf den Tank vorzugsweise. <br>
+                        (So bleibt die Verteidigungserhöhung permanent auf dem Spieler
+                        und dein Fokus kann sich regenerieren)!
+                </td>
+            </tr>
+
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Quellwasser.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Geistige Führung <br>(lvl 40)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>"Gesegnetes Quellwasser" erhöht die Heilung auf die Spieler, welche diesen Buff haben!</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Verkörperung des Geistes.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Verkörperung des Geistes <br>(lvl 50)</h3>
+                    <h2 class="hüberschrift"><i>muss mit</i></h2>
+                    <img src=" {% static 'web/img/Lebenswoge.png ' %}" alt="bild">
+                    <h3 class="hüberschrift">Lebenswoge <br>(lvl 70)</h3>
+                    <h3 class="hüberschrift"><i>kombiniert werden</i></h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Dieser Skill ist unser stärkster Raid-Heal, da er die Spieler im Ganzen Raid heilt und eine
+                    sehr hohe Range hat!<br><br>
+                    Läuft Lebenswoge aus, heilt man mit "Gebet des Trübsals" den Tank. Durch die 4 Heil-Ticks weden auch
+                    Leute geheilt, welche plötzlich wenig Leben haben.
+                    <br><br>
+                    Auch wenn Verkörperung des Geistes weniger Cooldown hat, als Lebenswoge, sollten diese beiden Skills
+                    immer zusammen benutzt werden, da Lebenswoge alleine nicht als Heilerskill taugt.
+                    <br><br>
+                    Ausserdem solte man immer an meherern Spielen in der näheren Umgebung haben, damit man diese
+                        gut supportet (10% mehr Werte)!</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <!--Priester / Ritter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Ritter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/lebensverknüpfung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Lebensverknüpfung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung"  width="80%">
+                    <b>Sehr hilfreich, weil man so die eigenen Lebenspunkte nicht ständig beobachten muss!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Skill_pri_kni60.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Herrliches Kräuseln<br>lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Diese "instant"-Heilung kann sehr hilfreich sein um Leute, während des Laufens zu heilen
+                    und man weiss, das die Schnellheilung zu "langsam" wäre</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schild der Disziplin.png' %}" alt="bild" width="65" height="65">
+                <h2 class="hüberschrift">Vorteile</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Durch das tragen eines Schildes und dem Skill:"Schild der Disziplin" hält man mehr aus,
+                        als andere Stoffklassen</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Kundschafter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Kundschafter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Umarmung des Wassergeistes.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Umarmung des Wassergeistes <br>lvl 15)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Mehr dmg für die Magischen DD´s und somit liegt der Boss schneller! Also als erstes auf
+                        MAX-LVL skillen</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Heilender Schuss.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Heilender Schuss <br>(lvl 35)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Heilt sehr gut und erzeugt einen guten Hot! Sollte benutzt werden wenn Nahkämpfer und
+                        Fernkämpfer getrennt in den Gruppen sortiert sind, damit es efektiver wird!</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Bereich der leichten Kette.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Bereich der leichten Kette <br>(lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Wie der lvl 35er Skill sollten die Gruppen sortiert werden (Alle Nahkämpfer und der Tank in
+                        die Gruppe des Piresters positionieren), damit "Kette des Lichts"
+                        sofort alle in der Gruppe heilen kann!
+                       </b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Champion-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Champion</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Turm der Vitalität.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Turm der Vitalität <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Sehr Hilfreich am Anfang un die DD´s beim "BURST" zu unterstützen!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Lichtverbindung.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Lichtverbindung <br>(lvl 70)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Sollte nur auf den Tank gewirkt werden, damit er schneller reagieren kann, bei schweren
+                    Boss-Ebents!</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Magier-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Magier</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Element Verteidigung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Elementarverteidigung <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Die Gruppe bekommt 15 Sekunden lang 9% weniger Schaden (3 Stacks). Man sollte den Skill nur
+                    alle 5 Sekunden nach casten, damit der "Gruppenheilung-Debuff" nicht hoch stackt!!!!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Schurke-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Schurke</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Schnelles Spellcasting.png' %}" alt="bild">
+                        <h3 class="hüberschrift">Schnelles Zaubern <br>lvl 25)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Zaubergeschwindigkeit wird um 18% erhöht</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenwut.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Schattenwut <br>(lvl 40)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Erhöht die kritische magische Trefferquote der Gruppe um 277,9 (LVL 104) </b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenfee.png ' %}" alt="bild">
+                <h2 class="hüberschrift">Schattenfee <br>(lvl 50)</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Erhöht die Magische Angriffskraft um 10%</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Krieger-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Krieger</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Kettenrüstung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Kettenrüstungs-Skill <br>lvl 70)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Kann Kettenrüstung tragen, was mehr dmg bedeutet!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <div>
+
+        </div>
+
+    </div>
+</details>
+<br>
+<br>
+<!--Kundschafter-->
+<details>
+    <summary class ="ausklappkomentar">
+        <b class ="ausklapptext">KUNDSCHAFTER</b>
+    </summary>
+    <div>
+        <!--Priester / Hexenmeister-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h3 style="background-color:black" class="hüberschrift">Priester / Hexenmeister</h3>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Hauch_der_weiderbelebung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Hauch der Wiederbelebung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    Dieser Skill ist Gruppen übergreifend und kann beim laufen benutzt werden.<br><br>
+                        Sehr gut in der Instanz: Tikal, Inferno, Eisriesen beim Trash oder bei den
+                        Bossen, wenn man keine Zeit hat um Gruppenheilung zu benutzen.
+                    <br><br><br>
+                        Man sollte diesen Skill aber 2x hinter einander einsetzen, wenn die Gruppe/Raid viel
+                        Schaden bekommt, da der Heil-Wert pro Person halbiert wird.
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname">
+                <img src=" {% static 'web/img/Gebet_des_Trübsals.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Gebet des Trübsals <br>(lvl 25)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Unser stärkster Single-Heal, da er nicht nur den Spieler gut heilen kann,
+                        sondern auch seine Physische und magische Verteidigung erhöht.<br><br>
+                        Sollte aber nicht eingesetzt werden, wenn das Ziel weniger als 20% life hat und
+                        permanenten Schaden vom Gegner bekommt, da ist Schnellheilung besser.
+                        <br><br>
+                        ACHTUNG, wenn ihr kein Fokus mehr habt, könnt ihr diesen Skill auch nicht einsetzen und wenn
+                        der Spieler aus deiner Cast-Range verschwindet, dann kommen nicht 4 Ticks an Heilung an, sondern
+                        nur 1 oder 2!
+                        <br><br>
+                        Am besten 1x Gebet des Trübsals, dann 4-6 mal Schnellheilung und dann wieder Gebet..,
+                        auf den Tank vorzugsweise. <br>
+                        (So bleibt die Verteidigungserhöhung permanent auf dem Spieler
+                        und dein Fokus kann sich regenerieren)!
+                </td>
+            </tr>
+
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Quellwasser.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Geistige Führung <br>(lvl 40)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>"Gesegnetes Quellwasser" erhöht die Heilung auf die Spieler, welche diesen Buff haben!</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Verkörperung des Geistes.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Verkörperung des Geistes <br>(lvl 50)</h3>
+                    <h2 class="hüberschrift"><i>muss mit</i></h2>
+                    <img src=" {% static 'web/img/Lebenswoge.png ' %}" alt="bild">
+                    <h3 class="hüberschrift">Lebenswoge <br>(lvl 70)</h3>
+                    <h3 class="hüberschrift"><i>kombiniert werden</i></h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Dieser Skill ist unser stärkster Raid-Heal, da er die Spieler im Ganzen Raid heilt und eine
+                    sehr hohe Range hat!<br><br>
+                    Läuft Lebenswoge aus, heilt man mit "Gebet des Trübsals" den Tank. Durch die 4 Heil-Ticks weden auch
+                    Leute geheilt, welche plötzlich wenig Leben haben.
+                    <br><br>
+                    Auch wenn Verkörperung des Geistes weniger Cooldown hat, als Lebenswoge, sollten diese beiden Skills
+                    immer zusammen benutzt werden, da Lebenswoge alleine nicht als Heilerskill taugt.
+                    <br><br>
+                    Ausserdem solte man immer an meherern Spielen in der näheren Umgebung haben, damit man diese
+                        gut supportet (10% mehr Werte)!</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <!--Priester / Ritter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Ritter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/lebensverknüpfung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Lebensverknüpfung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung"  width="80%">
+                    <b>Sehr hilfreich, weil man so die eigenen Lebenspunkte nicht ständig beobachten muss!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Skill_pri_kni60.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Herrliches Kräuseln<br>lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Diese "instant"-Heilung kann sehr hilfreich sein um Leute, während des Laufens zu heilen
+                    und man weiss, das die Schnellheilung zu "langsam" wäre</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schild der Disziplin.png' %}" alt="bild" width="65" height="65">
+                <h2 class="hüberschrift">Vorteile</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Durch das tragen eines Schildes und dem Skill:"Schild der Disziplin" hält man mehr aus,
+                        als andere Stoffklassen</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Kundschafter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Kundschafter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Umarmung des Wassergeistes.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Umarmung des Wassergeistes <br>lvl 15)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Mehr dmg für die Magischen DD´s und somit liegt der Boss schneller! Also als erstes auf
+                        MAX-LVL skillen</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Heilender Schuss.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Heilender Schuss <br>(lvl 35)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Heilt sehr gut und erzeugt einen guten Hot! Sollte benutzt werden wenn Nahkämpfer und
+                        Fernkämpfer getrennt in den Gruppen sortiert sind, damit es efektiver wird!</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Bereich der leichten Kette.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Bereich der leichten Kette <br>(lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Wie der lvl 35er Skill sollten die Gruppen sortiert werden (Alle Nahkämpfer und der Tank in
+                        die Gruppe des Piresters positionieren), damit "Kette des Lichts"
+                        sofort alle in der Gruppe heilen kann!
+                       </b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Champion-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Champion</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Turm der Vitalität.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Turm der Vitalität <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Sehr Hilfreich am Anfang un die DD´s beim "BURST" zu unterstützen!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Lichtverbindung.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Lichtverbindung <br>(lvl 70)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Sollte nur auf den Tank gewirkt werden, damit er schneller reagieren kann, bei schweren
+                    Boss-Ebents!</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Magier-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Magier</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Element Verteidigung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Elementarverteidigung <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Die Gruppe bekommt 15 Sekunden lang 9% weniger Schaden (3 Stacks). Man sollte den Skill nur
+                    alle 5 Sekunden nach casten, damit der "Gruppenheilung-Debuff" nicht hoch stackt!!!!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Schurke-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Schurke</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Schnelles Spellcasting.png' %}" alt="bild">
+                        <h3 class="hüberschrift">Schnelles Zaubern <br>lvl 25)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Zaubergeschwindigkeit wird um 18% erhöht</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenwut.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Schattenwut <br>(lvl 40)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Erhöht die kritische magische Trefferquote der Gruppe um 277,9 (LVL 104) </b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenfee.png ' %}" alt="bild">
+                <h2 class="hüberschrift">Schattenfee <br>(lvl 50)</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Erhöht die Magische Angriffskraft um 10%</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Krieger-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Krieger</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Kettenrüstung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Kettenrüstungs-Skill <br>lvl 70)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Kann Kettenrüstung tragen, was mehr dmg bedeutet!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <div>
+
+        </div>
+
+    </div>
+</details>
+<br>
+<br>
+<!--Druide-->
+<details>
+    <summary class ="ausklappkomentar">
+        <b class ="ausklapptext">DRUIDE</b>
+    </summary>
+    <div>
+        <!--Priester / Hexenmeister-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h3 style="background-color:black" class="hüberschrift">Priester / Hexenmeister</h3>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Hauch_der_weiderbelebung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Hauch der Wiederbelebung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    Dieser Skill ist Gruppen übergreifend und kann beim laufen benutzt werden.<br><br>
+                        Sehr gut in der Instanz: Tikal, Inferno, Eisriesen beim Trash oder bei den
+                        Bossen, wenn man keine Zeit hat um Gruppenheilung zu benutzen.
+                    <br><br><br>
+                        Man sollte diesen Skill aber 2x hinter einander einsetzen, wenn die Gruppe/Raid viel
+                        Schaden bekommt, da der Heil-Wert pro Person halbiert wird.
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname">
+                <img src=" {% static 'web/img/Gebet_des_Trübsals.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Gebet des Trübsals <br>(lvl 25)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Unser stärkster Single-Heal, da er nicht nur den Spieler gut heilen kann,
+                        sondern auch seine Physische und magische Verteidigung erhöht.<br><br>
+                        Sollte aber nicht eingesetzt werden, wenn das Ziel weniger als 20% life hat und
+                        permanenten Schaden vom Gegner bekommt, da ist Schnellheilung besser.
+                        <br><br>
+                        ACHTUNG, wenn ihr kein Fokus mehr habt, könnt ihr diesen Skill auch nicht einsetzen und wenn
+                        der Spieler aus deiner Cast-Range verschwindet, dann kommen nicht 4 Ticks an Heilung an, sondern
+                        nur 1 oder 2!
+                        <br><br>
+                        Am besten 1x Gebet des Trübsals, dann 4-6 mal Schnellheilung und dann wieder Gebet..,
+                        auf den Tank vorzugsweise. <br>
+                        (So bleibt die Verteidigungserhöhung permanent auf dem Spieler
+                        und dein Fokus kann sich regenerieren)!
+                </td>
+            </tr>
+
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Quellwasser.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Geistige Führung <br>(lvl 40)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>"Gesegnetes Quellwasser" erhöht die Heilung auf die Spieler, welche diesen Buff haben!</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Verkörperung des Geistes.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Verkörperung des Geistes <br>(lvl 50)</h3>
+                    <h2 class="hüberschrift"><i>muss mit</i></h2>
+                    <img src=" {% static 'web/img/Lebenswoge.png ' %}" alt="bild">
+                    <h3 class="hüberschrift">Lebenswoge <br>(lvl 70)</h3>
+                    <h3 class="hüberschrift"><i>kombiniert werden</i></h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Dieser Skill ist unser stärkster Raid-Heal, da er die Spieler im Ganzen Raid heilt und eine
+                    sehr hohe Range hat!<br><br>
+                    Läuft Lebenswoge aus, heilt man mit "Gebet des Trübsals" den Tank. Durch die 4 Heil-Ticks weden auch
+                    Leute geheilt, welche plötzlich wenig Leben haben.
+                    <br><br>
+                    Auch wenn Verkörperung des Geistes weniger Cooldown hat, als Lebenswoge, sollten diese beiden Skills
+                    immer zusammen benutzt werden, da Lebenswoge alleine nicht als Heilerskill taugt.
+                    <br><br>
+                    Ausserdem solte man immer an meherern Spielen in der näheren Umgebung haben, damit man diese
+                        gut supportet (10% mehr Werte)!</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <!--Priester / Ritter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Ritter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/lebensverknüpfung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Lebensverknüpfung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung"  width="80%">
+                    <b>Sehr hilfreich, weil man so die eigenen Lebenspunkte nicht ständig beobachten muss!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Skill_pri_kni60.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Herrliches Kräuseln<br>lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Diese "instant"-Heilung kann sehr hilfreich sein um Leute, während des Laufens zu heilen
+                    und man weiss, das die Schnellheilung zu "langsam" wäre</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schild der Disziplin.png' %}" alt="bild" width="65" height="65">
+                <h2 class="hüberschrift">Vorteile</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Durch das tragen eines Schildes und dem Skill:"Schild der Disziplin" hält man mehr aus,
+                        als andere Stoffklassen</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Kundschafter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Kundschafter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Umarmung des Wassergeistes.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Umarmung des Wassergeistes <br>lvl 15)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Mehr dmg für die Magischen DD´s und somit liegt der Boss schneller! Also als erstes auf
+                        MAX-LVL skillen</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Heilender Schuss.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Heilender Schuss <br>(lvl 35)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Heilt sehr gut und erzeugt einen guten Hot! Sollte benutzt werden wenn Nahkämpfer und
+                        Fernkämpfer getrennt in den Gruppen sortiert sind, damit es efektiver wird!</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Bereich der leichten Kette.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Bereich der leichten Kette <br>(lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Wie der lvl 35er Skill sollten die Gruppen sortiert werden (Alle Nahkämpfer und der Tank in
+                        die Gruppe des Piresters positionieren), damit "Kette des Lichts"
+                        sofort alle in der Gruppe heilen kann!
+                       </b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Champion-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Champion</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Turm der Vitalität.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Turm der Vitalität <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Sehr Hilfreich am Anfang un die DD´s beim "BURST" zu unterstützen!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Lichtverbindung.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Lichtverbindung <br>(lvl 70)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Sollte nur auf den Tank gewirkt werden, damit er schneller reagieren kann, bei schweren
+                    Boss-Ebents!</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Magier-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Magier</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Element Verteidigung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Elementarverteidigung <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Die Gruppe bekommt 15 Sekunden lang 9% weniger Schaden (3 Stacks). Man sollte den Skill nur
+                    alle 5 Sekunden nach casten, damit der "Gruppenheilung-Debuff" nicht hoch stackt!!!!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Schurke-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Schurke</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Schnelles Spellcasting.png' %}" alt="bild">
+                        <h3 class="hüberschrift">Schnelles Zaubern <br>lvl 25)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Zaubergeschwindigkeit wird um 18% erhöht</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenwut.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Schattenwut <br>(lvl 40)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Erhöht die kritische magische Trefferquote der Gruppe um 277,9 (LVL 104) </b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenfee.png ' %}" alt="bild">
+                <h2 class="hüberschrift">Schattenfee <br>(lvl 50)</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Erhöht die Magische Angriffskraft um 10%</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Krieger-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Krieger</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Kettenrüstung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Kettenrüstungs-Skill <br>lvl 70)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Kann Kettenrüstung tragen, was mehr dmg bedeutet!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <div>
+
+        </div>
+
+    </div>
+</details>
+<br>
+<br>
+<!--Bewahrer-->
+<details>
+    <summary class ="ausklappkomentar">
+        <b class ="ausklapptext">BEWAHRER</b>
+    </summary>
+    <div>
+        <!--Priester / Hexenmeister-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h3 style="background-color:black" class="hüberschrift">Priester / Hexenmeister</h3>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Hauch_der_weiderbelebung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Hauch der Wiederbelebung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    Dieser Skill ist Gruppen übergreifend und kann beim laufen benutzt werden.<br><br>
+                        Sehr gut in der Instanz: Tikal, Inferno, Eisriesen beim Trash oder bei den
+                        Bossen, wenn man keine Zeit hat um Gruppenheilung zu benutzen.
+                    <br><br><br>
+                        Man sollte diesen Skill aber 2x hinter einander einsetzen, wenn die Gruppe/Raid viel
+                        Schaden bekommt, da der Heil-Wert pro Person halbiert wird.
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname">
+                <img src=" {% static 'web/img/Gebet_des_Trübsals.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Gebet des Trübsals <br>(lvl 25)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Unser stärkster Single-Heal, da er nicht nur den Spieler gut heilen kann,
+                        sondern auch seine Physische und magische Verteidigung erhöht.<br><br>
+                        Sollte aber nicht eingesetzt werden, wenn das Ziel weniger als 20% life hat und
+                        permanenten Schaden vom Gegner bekommt, da ist Schnellheilung besser.
+                        <br><br>
+                        ACHTUNG, wenn ihr kein Fokus mehr habt, könnt ihr diesen Skill auch nicht einsetzen und wenn
+                        der Spieler aus deiner Cast-Range verschwindet, dann kommen nicht 4 Ticks an Heilung an, sondern
+                        nur 1 oder 2!
+                        <br><br>
+                        Am besten 1x Gebet des Trübsals, dann 4-6 mal Schnellheilung und dann wieder Gebet..,
+                        auf den Tank vorzugsweise. <br>
+                        (So bleibt die Verteidigungserhöhung permanent auf dem Spieler
+                        und dein Fokus kann sich regenerieren)!
+                </td>
+            </tr>
+
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Quellwasser.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Geistige Führung <br>(lvl 40)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>"Gesegnetes Quellwasser" erhöht die Heilung auf die Spieler, welche diesen Buff haben!</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Verkörperung des Geistes.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Verkörperung des Geistes <br>(lvl 50)</h3>
+                    <h2 class="hüberschrift"><i>muss mit</i></h2>
+                    <img src=" {% static 'web/img/Lebenswoge.png ' %}" alt="bild">
+                    <h3 class="hüberschrift">Lebenswoge <br>(lvl 70)</h3>
+                    <h3 class="hüberschrift"><i>kombiniert werden</i></h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Dieser Skill ist unser stärkster Raid-Heal, da er die Spieler im Ganzen Raid heilt und eine
+                    sehr hohe Range hat!<br><br>
+                    Läuft Lebenswoge aus, heilt man mit "Gebet des Trübsals" den Tank. Durch die 4 Heil-Ticks weden auch
+                    Leute geheilt, welche plötzlich wenig Leben haben.
+                    <br><br>
+                    Auch wenn Verkörperung des Geistes weniger Cooldown hat, als Lebenswoge, sollten diese beiden Skills
+                    immer zusammen benutzt werden, da Lebenswoge alleine nicht als Heilerskill taugt.
+                    <br><br>
+                    Ausserdem solte man immer an meherern Spielen in der näheren Umgebung haben, damit man diese
+                        gut supportet (10% mehr Werte)!</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <!--Priester / Ritter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Ritter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/lebensverknüpfung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Lebensverknüpfung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung"  width="80%">
+                    <b>Sehr hilfreich, weil man so die eigenen Lebenspunkte nicht ständig beobachten muss!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Skill_pri_kni60.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Herrliches Kräuseln<br>lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Diese "instant"-Heilung kann sehr hilfreich sein um Leute, während des Laufens zu heilen
+                    und man weiss, das die Schnellheilung zu "langsam" wäre</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schild der Disziplin.png' %}" alt="bild" width="65" height="65">
+                <h2 class="hüberschrift">Vorteile</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Durch das tragen eines Schildes und dem Skill:"Schild der Disziplin" hält man mehr aus,
+                        als andere Stoffklassen</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Kundschafter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Kundschafter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Umarmung des Wassergeistes.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Umarmung des Wassergeistes <br>lvl 15)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Mehr dmg für die Magischen DD´s und somit liegt der Boss schneller! Also als erstes auf
+                        MAX-LVL skillen</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Heilender Schuss.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Heilender Schuss <br>(lvl 35)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Heilt sehr gut und erzeugt einen guten Hot! Sollte benutzt werden wenn Nahkämpfer und
+                        Fernkämpfer getrennt in den Gruppen sortiert sind, damit es efektiver wird!</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Bereich der leichten Kette.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Bereich der leichten Kette <br>(lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Wie der lvl 35er Skill sollten die Gruppen sortiert werden (Alle Nahkämpfer und der Tank in
+                        die Gruppe des Piresters positionieren), damit "Kette des Lichts"
+                        sofort alle in der Gruppe heilen kann!
+                       </b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Champion-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Champion</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Turm der Vitalität.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Turm der Vitalität <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Sehr Hilfreich am Anfang un die DD´s beim "BURST" zu unterstützen!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Lichtverbindung.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Lichtverbindung <br>(lvl 70)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Sollte nur auf den Tank gewirkt werden, damit er schneller reagieren kann, bei schweren
+                    Boss-Ebents!</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Magier-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Magier</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Element Verteidigung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Elementarverteidigung <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Die Gruppe bekommt 15 Sekunden lang 9% weniger Schaden (3 Stacks). Man sollte den Skill nur
+                    alle 5 Sekunden nach casten, damit der "Gruppenheilung-Debuff" nicht hoch stackt!!!!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Schurke-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Schurke</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Schnelles Spellcasting.png' %}" alt="bild">
+                        <h3 class="hüberschrift">Schnelles Zaubern <br>lvl 25)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Zaubergeschwindigkeit wird um 18% erhöht</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenwut.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Schattenwut <br>(lvl 40)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Erhöht die kritische magische Trefferquote der Gruppe um 277,9 (LVL 104) </b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenfee.png ' %}" alt="bild">
+                <h2 class="hüberschrift">Schattenfee <br>(lvl 50)</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Erhöht die Magische Angriffskraft um 10%</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Krieger-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Krieger</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Kettenrüstung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Kettenrüstungs-Skill <br>lvl 70)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Kann Kettenrüstung tragen, was mehr dmg bedeutet!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <div>
+
+        </div>
+
+    </div>
+</details>
+<br>
+<br>
+<!--Ritter-->
+<details>
+    <summary class ="ausklappkomentar">
+        <b class ="ausklapptext">RITTER</b>
+    </summary>
+    <div>
+        <!--Priester / Hexenmeister-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h3 style="background-color:black" class="hüberschrift">Priester / Hexenmeister</h3>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Hauch_der_weiderbelebung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Hauch der Wiederbelebung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    Dieser Skill ist Gruppen übergreifend und kann beim laufen benutzt werden.<br><br>
+                        Sehr gut in der Instanz: Tikal, Inferno, Eisriesen beim Trash oder bei den
+                        Bossen, wenn man keine Zeit hat um Gruppenheilung zu benutzen.
+                    <br><br><br>
+                        Man sollte diesen Skill aber 2x hinter einander einsetzen, wenn die Gruppe/Raid viel
+                        Schaden bekommt, da der Heil-Wert pro Person halbiert wird.
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname">
+                <img src=" {% static 'web/img/Gebet_des_Trübsals.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Gebet des Trübsals <br>(lvl 25)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Unser stärkster Single-Heal, da er nicht nur den Spieler gut heilen kann,
+                        sondern auch seine Physische und magische Verteidigung erhöht.<br><br>
+                        Sollte aber nicht eingesetzt werden, wenn das Ziel weniger als 20% life hat und
+                        permanenten Schaden vom Gegner bekommt, da ist Schnellheilung besser.
+                        <br><br>
+                        ACHTUNG, wenn ihr kein Fokus mehr habt, könnt ihr diesen Skill auch nicht einsetzen und wenn
+                        der Spieler aus deiner Cast-Range verschwindet, dann kommen nicht 4 Ticks an Heilung an, sondern
+                        nur 1 oder 2!
+                        <br><br>
+                        Am besten 1x Gebet des Trübsals, dann 4-6 mal Schnellheilung und dann wieder Gebet..,
+                        auf den Tank vorzugsweise. <br>
+                        (So bleibt die Verteidigungserhöhung permanent auf dem Spieler
+                        und dein Fokus kann sich regenerieren)!
+                </td>
+            </tr>
+
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Quellwasser.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Geistige Führung <br>(lvl 40)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>"Gesegnetes Quellwasser" erhöht die Heilung auf die Spieler, welche diesen Buff haben!</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Verkörperung des Geistes.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Verkörperung des Geistes <br>(lvl 50)</h3>
+                    <h2 class="hüberschrift"><i>muss mit</i></h2>
+                    <img src=" {% static 'web/img/Lebenswoge.png ' %}" alt="bild">
+                    <h3 class="hüberschrift">Lebenswoge <br>(lvl 70)</h3>
+                    <h3 class="hüberschrift"><i>kombiniert werden</i></h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Dieser Skill ist unser stärkster Raid-Heal, da er die Spieler im Ganzen Raid heilt und eine
+                    sehr hohe Range hat!<br><br>
+                    Läuft Lebenswoge aus, heilt man mit "Gebet des Trübsals" den Tank. Durch die 4 Heil-Ticks weden auch
+                    Leute geheilt, welche plötzlich wenig Leben haben.
+                    <br><br>
+                    Auch wenn Verkörperung des Geistes weniger Cooldown hat, als Lebenswoge, sollten diese beiden Skills
+                    immer zusammen benutzt werden, da Lebenswoge alleine nicht als Heilerskill taugt.
+                    <br><br>
+                    Ausserdem solte man immer an meherern Spielen in der näheren Umgebung haben, damit man diese
+                        gut supportet (10% mehr Werte)!</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <!--Priester / Ritter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Ritter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/lebensverknüpfung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Lebensverknüpfung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung"  width="80%">
+                    <b>Sehr hilfreich, weil man so die eigenen Lebenspunkte nicht ständig beobachten muss!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Skill_pri_kni60.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Herrliches Kräuseln<br>lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Diese "instant"-Heilung kann sehr hilfreich sein um Leute, während des Laufens zu heilen
+                    und man weiss, das die Schnellheilung zu "langsam" wäre</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schild der Disziplin.png' %}" alt="bild" width="65" height="65">
+                <h2 class="hüberschrift">Vorteile</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Durch das tragen eines Schildes und dem Skill:"Schild der Disziplin" hält man mehr aus,
+                        als andere Stoffklassen</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Kundschafter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Kundschafter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Umarmung des Wassergeistes.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Umarmung des Wassergeistes <br>lvl 15)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Mehr dmg für die Magischen DD´s und somit liegt der Boss schneller! Also als erstes auf
+                        MAX-LVL skillen</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Heilender Schuss.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Heilender Schuss <br>(lvl 35)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Heilt sehr gut und erzeugt einen guten Hot! Sollte benutzt werden wenn Nahkämpfer und
+                        Fernkämpfer getrennt in den Gruppen sortiert sind, damit es efektiver wird!</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Bereich der leichten Kette.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Bereich der leichten Kette <br>(lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Wie der lvl 35er Skill sollten die Gruppen sortiert werden (Alle Nahkämpfer und der Tank in
+                        die Gruppe des Piresters positionieren), damit "Kette des Lichts"
+                        sofort alle in der Gruppe heilen kann!
+                       </b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Champion-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Champion</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Turm der Vitalität.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Turm der Vitalität <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Sehr Hilfreich am Anfang un die DD´s beim "BURST" zu unterstützen!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Lichtverbindung.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Lichtverbindung <br>(lvl 70)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Sollte nur auf den Tank gewirkt werden, damit er schneller reagieren kann, bei schweren
+                    Boss-Ebents!</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Magier-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Magier</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Element Verteidigung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Elementarverteidigung <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Die Gruppe bekommt 15 Sekunden lang 9% weniger Schaden (3 Stacks). Man sollte den Skill nur
+                    alle 5 Sekunden nach casten, damit der "Gruppenheilung-Debuff" nicht hoch stackt!!!!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Schurke-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Schurke</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Schnelles Spellcasting.png' %}" alt="bild">
+                        <h3 class="hüberschrift">Schnelles Zaubern <br>lvl 25)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Zaubergeschwindigkeit wird um 18% erhöht</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenwut.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Schattenwut <br>(lvl 40)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Erhöht die kritische magische Trefferquote der Gruppe um 277,9 (LVL 104) </b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenfee.png ' %}" alt="bild">
+                <h2 class="hüberschrift">Schattenfee <br>(lvl 50)</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Erhöht die Magische Angriffskraft um 10%</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Krieger-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Krieger</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Kettenrüstung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Kettenrüstungs-Skill <br>lvl 70)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Kann Kettenrüstung tragen, was mehr dmg bedeutet!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <div>
+
+        </div>
+
+    </div>
+</details>
+<br>
+<br>
+<!--Champion-->
+<details>
+    <summary class ="ausklappkomentar">
+        <b class ="ausklapptext">CHAMPION</b>
+    </summary>
+    <div>
+        <!--Priester / Hexenmeister-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h3 style="background-color:black" class="hüberschrift">Priester / Hexenmeister</h3>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Hauch_der_weiderbelebung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Hauch der Wiederbelebung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    Dieser Skill ist Gruppen übergreifend und kann beim laufen benutzt werden.<br><br>
+                        Sehr gut in der Instanz: Tikal, Inferno, Eisriesen beim Trash oder bei den
+                        Bossen, wenn man keine Zeit hat um Gruppenheilung zu benutzen.
+                    <br><br><br>
+                        Man sollte diesen Skill aber 2x hinter einander einsetzen, wenn die Gruppe/Raid viel
+                        Schaden bekommt, da der Heil-Wert pro Person halbiert wird.
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname">
+                <img src=" {% static 'web/img/Gebet_des_Trübsals.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Gebet des Trübsals <br>(lvl 25)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    Unser stärkster Single-Heal, da er nicht nur den Spieler gut heilen kann,
+                        sondern auch seine Physische und magische Verteidigung erhöht.<br><br>
+                        Sollte aber nicht eingesetzt werden, wenn das Ziel weniger als 20% life hat und
+                        permanenten Schaden vom Gegner bekommt, da ist Schnellheilung besser.
+                        <br><br>
+                        ACHTUNG, wenn ihr kein Fokus mehr habt, könnt ihr diesen Skill auch nicht einsetzen und wenn
+                        der Spieler aus deiner Cast-Range verschwindet, dann kommen nicht 4 Ticks an Heilung an, sondern
+                        nur 1 oder 2!
+                        <br><br>
+                        Am besten 1x Gebet des Trübsals, dann 4-6 mal Schnellheilung und dann wieder Gebet..,
+                        auf den Tank vorzugsweise. <br>
+                        (So bleibt die Verteidigungserhöhung permanent auf dem Spieler
+                        und dein Fokus kann sich regenerieren)!
+                </td>
+            </tr>
+
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Quellwasser.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Geistige Führung <br>(lvl 40)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>"Gesegnetes Quellwasser" erhöht die Heilung auf die Spieler, welche diesen Buff haben!</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Verkörperung des Geistes.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Verkörperung des Geistes <br>(lvl 50)</h3>
+                    <h2 class="hüberschrift"><i>muss mit</i></h2>
+                    <img src=" {% static 'web/img/Lebenswoge.png ' %}" alt="bild">
+                    <h3 class="hüberschrift">Lebenswoge <br>(lvl 70)</h3>
+                    <h3 class="hüberschrift"><i>kombiniert werden</i></h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Dieser Skill ist unser stärkster Raid-Heal, da er die Spieler im Ganzen Raid heilt und eine
+                    sehr hohe Range hat!<br><br>
+                    Läuft Lebenswoge aus, heilt man mit "Gebet des Trübsals" den Tank. Durch die 4 Heil-Ticks weden auch
+                    Leute geheilt, welche plötzlich wenig Leben haben.
+                    <br><br>
+                    Auch wenn Verkörperung des Geistes weniger Cooldown hat, als Lebenswoge, sollten diese beiden Skills
+                    immer zusammen benutzt werden, da Lebenswoge alleine nicht als Heilerskill taugt.
+                    <br><br>
+                    Ausserdem solte man immer an meherern Spielen in der näheren Umgebung haben, damit man diese
+                        gut supportet (10% mehr Werte)!</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <!--Priester / Ritter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Ritter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/lebensverknüpfung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Lebensverknüpfung <br>(lvl 20)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung"  width="80%">
+                    <b>Sehr hilfreich, weil man so die eigenen Lebenspunkte nicht ständig beobachten muss!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Skill_pri_kni60.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Herrliches Kräuseln<br>lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Diese "instant"-Heilung kann sehr hilfreich sein um Leute, während des Laufens zu heilen
+                    und man weiss, das die Schnellheilung zu "langsam" wäre</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schild der Disziplin.png' %}" alt="bild" width="65" height="65">
+                <h2 class="hüberschrift">Vorteile</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Durch das tragen eines Schildes und dem Skill:"Schild der Disziplin" hält man mehr aus,
+                        als andere Stoffklassen</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Kundschafter-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname"  width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Kundschafter</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Umarmung des Wassergeistes.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Umarmung des Wassergeistes <br>lvl 15)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Mehr dmg für die Magischen DD´s und somit liegt der Boss schneller! Also als erstes auf
+                        MAX-LVL skillen</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Heilender Schuss.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Heilender Schuss <br>(lvl 35)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Heilt sehr gut und erzeugt einen guten Hot! Sollte benutzt werden wenn Nahkämpfer und
+                        Fernkämpfer getrennt in den Gruppen sortiert sind, damit es efektiver wird!</b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Bereich der leichten Kette.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Bereich der leichten Kette <br>(lvl 60)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Wie der lvl 35er Skill sollten die Gruppen sortiert werden (Alle Nahkämpfer und der Tank in
+                        die Gruppe des Piresters positionieren), damit "Kette des Lichts"
+                        sofort alle in der Gruppe heilen kann!
+                       </b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Champion-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Champion</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Turm der Vitalität.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Turm der Vitalität <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Sehr Hilfreich am Anfang un die DD´s beim "BURST" zu unterstützen!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Lichtverbindung.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Lichtverbindung <br>(lvl 70)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Sollte nur auf den Tank gewirkt werden, damit er schneller reagieren kann, bei schweren
+                    Boss-Ebents!</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Magier-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Magier</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Element Verteidigung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Elementarverteidigung <br>lvl 60)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Die Gruppe bekommt 15 Sekunden lang 9% weniger Schaden (3 Stacks). Man sollte den Skill nur
+                    alle 5 Sekunden nach casten, damit der "Gruppenheilung-Debuff" nicht hoch stackt!!!!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Schurke-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Schurke</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Schnelles Spellcasting.png' %}" alt="bild">
+                        <h3 class="hüberschrift">Schnelles Zaubern <br>lvl 25)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Zaubergeschwindigkeit wird um 18% erhöht</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+                <br>
+                <br>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenwut.png ' %}" alt="bild">
+                <h3 class="hüberschrift">Schattenwut <br>(lvl 40)</h3>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Erhöht die kritische magische Trefferquote der Gruppe um 277,9 (LVL 104) </b>
+                </td>
+            </tr>
+            <tr>
+                <td class ="skillname"><br>
+                <img src=" {% static 'web/img/Schattenfee.png ' %}" alt="bild">
+                <h2 class="hüberschrift">Schattenfee <br>(lvl 50)</h2>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Erhöht die Magische Angriffskraft um 10%</b>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <br>
+    <div>
+        <!--Priester / Krieger-->
+        <table class="tableclass">
+            <tr>
+                <td class ="skillname" width="25%">
+                    <h2 style="background-color:black" class="hüberschrift">Priester / Krieger</h2>
+                    <div class="div1">
+                        <img src=" {% static 'web/img/Kettenrüstung.png ' %}" alt="bild">
+                        <h3 class="hüberschrift">Kettenrüstungs-Skill <br>lvl 70)</h3>
+                    </div>
+                </td>
+                <td class ="skillbeschreibung">
+                    <b>Kann Kettenrüstung tragen, was mehr dmg bedeutet!</b>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </div>
+        <br>
+        <div>
+
+        </div>
+
+    </div>
+</details>
+<br>
+<br>
 {% endblock %}

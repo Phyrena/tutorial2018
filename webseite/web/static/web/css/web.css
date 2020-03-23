@@ -4,104 +4,196 @@ body {
     margin-left: 40px;
 }
 
+
 .p1 {
-    color: "red";
+    background-color: black;
+    color: lightblue;
+    float: right;
+    font-size: 22pt;
+    padding: 35px 5px 35px 5px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    border-style: solid;
+    width: 100%;
 }
 
-.hüberschrift{
-    color: lightgreen;
+.p_forum {
+    background-color: black;
+    color: lightblue;
+    font-size: 22pt;
     text-align: center;
 }
 
-h1, h2, h3, h4 {
-color: blue;
-text-align: center;
+.p_post{
+    background-color: black;
+    color: red;
+    font-size: 22pt;
+    text-align: center;
 }
 
-.div1 {
-background: red;
-border-style: solid;
-border-width: 2px;
-border-color: black
-padding: 40px;
+
+.div2 {
+    background-color: black;
+    color: lightblue;
+    float: center;
+    font-size: 22pt;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    border-style: solid;
+    width: 100%;
 }
 
+/* BILDER-FELD */
+.img1 {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* HAUPT-Überschriften */
+.haupt_überschrift{
+    background-color:orange;
+    color: black;
+    text-align: center;
+}
+
+
+/* Überschriften */
+.hüberschrift{
+    color: black;
+    text-align: center;
+}
+
+
+
+/* AUFKLAPP-FELD */
+.ausklappkomentar{
+    width: 20%;
+    background-color: black;
+    color: #666666;
+    display: inline-block;
+    padding: 5px 5px 10px 5px;
+    margin-left: 20px;              /* Abstand von linekn Rand */
+    /* Aussen-Rahmen */
+    border: 5px black;
+    border-color: #3b3b3b;
+    outline-color: #bdbdbd;
+    border-style: double;
+    border-radius: 8px;
+
+    /* Doppel-Linie-Aussen-Rahmen */
+    /* outline-style: double;
+    outline-color: green;*/
+}
+
+/* AUFKLAPP-TEXT */
+.ausklapptext {
+    color: #ed7f3b;
+    font-size: 25px
+}
+
+/* Tavbellen-FELD */
+.tableclass{
+    width: 95%;
+    font-size: 14pt;
+    font-family: 'times';
+    margin-left: 20px;
+
+}
+
+/* Skillname-FELD */
 .skillname {
-background-color: lightblue;
-color: "red";
-text-align: center;
+    background-color: #37f1d5;
+    color: #545454;
+    text-align: center;
 }
 
+/* Skillbeschreibung-FELD */
 .skillbeschreibung {
 background-color: black;
+color: #f6dd9d;
 text-align: justify;
-line-height: 25px;
-font-family: "times";
-margin-left: 60px;
+line-height: 16px;
+font-family: 'times';
+font-size: 14pt;
+padding: 5px 5px 10px 5px;
 }
 
 
 
-.header {
-    color: white;
-    font-size: 11pt;
+/* Navigationsbar */
+.navbar-account {
+    background-color: black;
+    color: #545454;
+    font-size: 18pt;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-style: solid;
+    position: fixed; /* beim Scrolen, bewegt sich die Nav-Leiste mit! */
+    left: 78%;
+}
+
+/* Hauptnavbar-Feld */
+
+.haupt_navbar {
+    float: center;
+    font-size: 18pt;
+    position: static;
+}
+
+/* Weblink-FELD (normal / schon besucht) */
+a:link , a:visited {     /* a: link bearbeitet den Link, auf dem du noch NICHT warst, a:visited bearbeitet den Link, auf dem du SCHON warst */
+    text-color: #9fe9e4;
+    background: black;
+    color: #9fe9e4;
     text-decoration: none;
 }
 
-.navbar-brand {
-    background: red;
-    float: left;
-    font-size: 20pt;
-    margin-right: 20px;
-    font-family: 'Lobster', cursive;
+
+/* Weblink-FELD (Maus auf Link) */
+a:hover {       /* bearbeitet den Link, auf dem die Maus GERADE sich befindest */
+    text-color: #ebebf4;
+    background: black;
     color: white;
 }
 
 
-a:link {
-    text-color: lightgreen;
-    background: red;
-    color: lightgreen;
+/* FORUM-POSTS */
+.forum container {
+    margin-left: 40px;
+    background-color: darkgreen;
 }
 
-a:link {
-    text-color: lightgreen;
-    background: red;
-    color: yellow;
-}
 
-a:hover {
-    text-color: lightgreen;
-    background: red;
-    color: lightgreen;
-}
-.navbar-text1 {
-    background: red;
-    float: right;
-    font-size: 20pt;
-    margin-right: 20px;
-    font-family: 'Lobster', cursive;
-    font-background: white;
-}
+.date {
+    color: darkorange;
+ }
 
-.navbar-text3 {
-    font-background: white;
-    float: center;
-    font-size: 18pt;
-    text-color: white;
-}
-
-.hr {
-  display: block;
-  color: "blue";
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: inset;
-  border-width: 3px;
-}
-
-.page-header {
+.post {
+    margin-bottom: 70px;
     color: white;
+}
+
+
+.post-form textarea, . post-form input {
+    width: 100%;
+}
+
+
+
+/* To-Do-Liste */
+.div2{
+    margin-left: 20px;
+    background-color: black;
+    color: white;
+    width: 35%;
+    font-size: 20px;
+}
+
+.to_do_button{
+    background-color: black;
 }

@@ -3,14 +3,19 @@ from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from .forms import RegisterForm, LoginForm
+from .models import Todo
 
+from .models import Post
+from django.utils import timezone
+
+from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponseRedirect
 
 def index(request):
     return render(request, 'web/base.html')
 
+
 def register_view(request):
-    if request.user.is_authenticated:
-        return redirect(reverse('blog:timeline', kwargs={'username': request.user.username}))
     register_form = RegisterForm()
     if request.method == "POST":
         register_form = RegisterForm(request.POST)
@@ -22,13 +27,11 @@ def register_view(request):
             user = authenticate(request, username=username, password=password)
             if user:
                 login(request, user)
-                return redirect(reverse('blog:timeline', kwargs={'username': request.user.username}))
+                return redirect(reverse('', kwargs={'username': request.user.username}))
     return render(request, 'web/register.html', {'register_form': register_form})
 
 
 def login_view(request):
-    if request.user.is_authenticated:
-        return redirect(reverse('blog:timeline', kwargs={'username': request.user.username}))
     login_form = LoginForm()
     if request.method == "POST":
         login_form = LoginForm(request.POST)
@@ -38,7 +41,6 @@ def login_view(request):
             user = authenticate(request, username=username, password=password)
             if user:
                 login(request, user)
-                return redirect(reverse('blog:timeline', kwargs={'username': request.user.username}))
     return render(request, 'web/login.html', {'login_form': login_form})
 
 
@@ -62,7 +64,6 @@ def downloads_view(request):
     return render(request, 'web/downloads.html')
 
 
-
 def forum_view(request):
     return render(request, 'web/forum.html')
 
@@ -75,10 +76,32 @@ def neuste_beiträge_view(request):
 
 
 
+def forum_post_list(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'web/forum_post_list.html', {'posts': posts})
 
 
 
-
+#To-Do-Liste
+@csrf_exempt
+def to_do_list_view(request):
+    todo_items = Todo.objects.all().order_by("-added_date")
+    return render(request, 'web/to_do_list.html', {
+        "todo_items": todo_items
+    })
+#To-Do-Liste
+def add_todo(request):
+    print(request.POST)
+    current_date = timezone.now()
+    content = request.POST["content"]
+    created_obj = Todo.objects.create(added_date=current_date, text=content)
+    print(current_date)
+    print(content)
+    print(created_obj)
+    print(created_obj.id)
+    length_of_todos = Todo.objects.all().count()
+    print(length_of_todos)
+    return HttpResponseRedirect('web/to_do_list.html')
 
 
 

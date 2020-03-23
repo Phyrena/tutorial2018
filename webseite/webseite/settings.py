@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/dev/ref/settings/
 """
 
-import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -38,9 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
     'web',
-    'bootstrap4',
+    'bootstrap4', #brauchen wir für den Login
 ]
 
 MIDDLEWARE = [
@@ -125,5 +123,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/web/css/'
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
