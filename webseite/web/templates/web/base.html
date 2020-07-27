@@ -51,8 +51,6 @@
                 <a href="{% url 'web:login' %}" class="btn btn-secondary btn-info">Login |</a>
                 <a href="{% url 'web:register' %}" class="btn btn-secondary btn-info">Account anlegen</a>
                 {% endif %}
-
-
             </b></span>
             </div>
         </nav>
@@ -60,7 +58,6 @@
         <nav class="header2">
             <div>
             <span class="haupt_navbar"><b>
-                <a href="{% url 'web:to_do_list' %}">To do Liste |</a>
                 <a href="{% url 'web:spiel_Website' %}">Spiel-Website |</a>
                 <a href="{% url 'web:klassen' %}">Klassen |</a>
                 <a href="{% url 'web:forum' %}">Forum |</a>
@@ -74,21 +71,44 @@
 
     </header>
     <!--<hr size="30" color="black" >        <!-- Malt einen Strich mit 10er stärke -->
-
+    <body>
     <br>
         {% block authForm %}
         {% endblock %}
     <br>
 
+    <div class="todo-container">
+        <h1 class="todo_hüberschrift">To-do-liste</h1>
+        <div class="todo-container2">
+            <div class="col mt-4">
+                <h2 class="todo_hüberschrift">Add Item</h2>
+                <form action="add_todo/" method="post" class="form-inline">
+                    <input type="text" name="content" class="infobox" placeholder="type here..">
+                    <button type="submit" class="to_do_button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="todo-container">
+            <ul class="list-group1">
+                {% for todo_item in todo_items %}
+
+                <li class="list-group2">{{ todo_item.text }}
+                    <div class="div_delete">
+                        <form action="delete_todo/{{todo_item.id}}/" action="post">
+                            <br>
+                            <button type="submit" class="to_do_button_delete">delete</button>
+
+                        </form>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+    </div>
+
+    </body>
 
 
-
-    <footer>
-        <h3>IMPRESSUM</h3>
-        <hr>
-        <p>erreichbarkeit</p>
-        <br>
-    </footer>
 
 
 </html>

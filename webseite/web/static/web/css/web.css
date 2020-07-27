@@ -186,14 +186,77 @@ a:hover {       /* bearbeitet den Link, auf dem die Maus GERADE sich befindest *
 
 
 /* To-Do-Liste */
-.div2{
-    margin-left: 20px;
-    background-color: black;
-    color: white;
-    width: 35%;
+
+.todo-container2{               /* type here.. div */
+    color: black;
+    width: 100%;
     font-size: 20px;
 }
-
-.to_do_button{
-    background-color: black;
+.todo_hüberschrift{
+    background-color: lightblue;
+    font-color: lightblue;
 }
+
+.form-control{                  /* type input-box div */
+    width: 10%;
+    font-size: 20px;
+    float: left;
+}
+
+.infobox{
+    width: 20%;
+    float: left;
+}
+
+.to_do_button{                  /* Submit-Buttton */
+    background-color: lightblue;
+    font-color: white;
+    width: 10%;
+    margin-left: 10px;
+}
+
+
+.todo-container{                /* Liste-Div */
+    margin-left: 60px;
+    background-color: black;
+    font-color: white;
+    width: 85%;
+    font-size: 10px;
+}
+
+.list-group1{                   /* UL-Liste */
+    background: yellow;
+    color: black;
+    width: 75%;
+    font-size: 30px;
+    text-decoration:none;
+}
+
+
+
+.list-group2{                   /* Li-Liste */
+    background: black;
+    color: lightblue;
+    width: 100%;
+    font-size: 30px;
+    float: left;
+    margin: 20px 20px 20px 20px;
+    text-decoration:none;
+}
+
+
+
+.div_delete{                    /* div-Delete-Buttton */
+    color: blue;
+    float: right;
+}
+
+.to_do_button_delete{           /* Delete-Buttton */
+    background-color: #c91313;
+    font-color: black;
+    float: right;
+}
+
+
+
+

@@ -11,8 +11,7 @@ from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponseRedirect
 
-def index(request):
-    return render(request, 'web/base.html')
+
 
 
 def register_view(request):
@@ -82,27 +81,25 @@ def forum_post_list(request):
 
 
 
-#To-Do-Liste
-@csrf_exempt
-def to_do_list_view(request):
+def index(request):
     todo_items = Todo.objects.all().order_by("-added_date")
-    return render(request, 'web/to_do_list.html', {
-        "todo_items": todo_items
-    })
-#To-Do-Liste
+    return render(request, 'web/base.html',{"todo_items":todo_items})
+
+@csrf_exempt
 def add_todo(request):
-    print(request.POST)
     current_date = timezone.now()
     content = request.POST["content"]
-    created_obj = Todo.objects.create(added_date=current_date, text=content)
-    print(current_date)
-    print(content)
-    print(created_obj)
-    print(created_obj.id)
-    length_of_todos = Todo.objects.all().count()
-    print(length_of_todos)
-    return HttpResponseRedirect('web/to_do_list.html')
 
+    created_obj = Todo.objects.create(added_date=current_date, text=content)
+    length_of_todos = Todo.objects.all().count()
+    return HttpResponseRedirect("/")
+
+
+@csrf_exempt
+def delete_todo(request, todo_id):
+    print((todo_id))
+    Todo.objects.get(id=todo_id).delete()
+    return HttpResponseRedirect("/")
 
 
 
